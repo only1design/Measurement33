@@ -70,16 +70,6 @@
       </div>
     </div>
 
-    <!-- <div class="errors">
-      <div class="errors__close">
-        <span class="m-icon i-close close-btn"></span>
-      </div>
-      <div class="errors__container">
-        <p class="errors__item">Lorem ipsum, dolor sit.</p>
-        <p class="errors__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Suscipit laudantium inventore optio quo a, eius earum officia rem cupiditate cum?</p>
-      </div>
-    </div> -->
-
     <div class="modal-windows wrapper">
       <!-- ACC REGISTRATION -->
 
@@ -95,7 +85,7 @@
 
       <!-- ACC AUTHORIZE -->
 
-      <!-- <div class="dialog-window hidden" id="account-modal">
+      <div class="dialog-window hidden" id="account-modal">
         <h2 class="dialog-window__header">Account</h2>
         <form class="form" action="#" id="account-authorize">
           <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
@@ -110,11 +100,11 @@
         <form action="#">
           <input class="dialog-window__button--create-acc button" type="submit" value="create an account">
         </form>
-      </div> -->
+      </div>
 
       <!-- ACC AFTER AUTHORIZE -->
 
-      <div class="dialog-window hidden" id="account-modal">
+      <!-- <div class="dialog-window hidden" id="account-modal">
         <h2 class="dialog-window__header">Account</h2>
 
         <div class="dialog-window__username">Name</div>
@@ -136,7 +126,7 @@
             <a href="#" class="account-options__link"><span class="m-icon i-log-out"></span>Log out</a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- WISHLIST -->
 
@@ -482,191 +472,181 @@
     </div>
   </header>
 
-  <main class="main-content" role="main">
+  <main class="main-content main-content--no-shadow" role="main">
     <div class="header-placeholder"></div>
 
-    <div class="wrapper wrapper--main-video">
-      <div class="main-video-container">
-        <div class="main-video">
-          <video class="main-video__video" controls="" poster="styles/img/main-video/main-video.jpg">
-            <source src="styles/img/main-video/shoes_factory.mp4" type="video/mp4">
-            Your browser does not support HTML video.
-          </video>
-            <!-- <img class="main-video__img" src="styles/img/main-video/main-video.jpg" alt="About shoes"> -->
-          <!-- <div class="main-video__sound-btn">
-            <span class="main-video__sound-btn-icon m-icon i-sound"></span>
-            <span class="main-video__sound-btn-icon m-icon i-sound-off"></span>
-          </div> -->
-          <img class="main-video__logo-img" src="styles/img/main-video/main-video__logo.png" alt="Measurement logo">
-        </div>
-      </div>
-    </div>
-
-    <div class="about-brand-bg-box">
+    <div class="settings blur-bg">
       <div class="wrapper">
-        <div class="about-brand">
-          <div class="about-brand__container">
-            <p class="about-brand__desc">
-              Measurement 33 is not just another shoe brand. It's a new label that reflects the
-              spirit of the third millennium woman - confident, brave and determined.<br><br>
-              We want all women to be happy as they chart their own path to success, without ever having to
-              compromise or accept second best.<br><br>
-              At M33 we produce comfortable beautiful premium
-              shoes for women with small feet, so they can focus on other important things in 
-              their lives. Our shoes mean there's no need to compromise on beauty or comfort 
-              anymore.<br><br>
-              Why compromise if you can have it all?
-            </p>
-          </div>
-          <div class="about-brand__container">
-            <div class="about-brand__img-container">
-              <img class="about-brand__img about-brand__img--first" src="styles/img/about-brand/1.jpg" alt="Measurement Model">
-              <img class="about-brand__img about-brand__img--second" src="styles/img/about-brand/2.jpg" alt="Measurement Model">
+
+        <h1 class="settings__title">Settings</h1>
+
+        <div class="settings__sections-container">
+          <div class="settings__section" id="set-my-information">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">My information</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom" style="display: none;">
+              <div class="settings__section-bottom-content">
+                <div class="settings__my-info-row">
+                  <p class="settings__my-info-col-1">Name</p>
+                  <p class="settings__my-info-col-2">Tatiana</p>
+                </div>
+
+                <div class="settings__my-info-row">
+                  <p class="settings__my-info-col-1">E-mail</p>
+                  <p class="settings__my-info-col-2">polo@mail.com</p>
+                </div>
+
+                <div class="settings__my-info-row">
+                  <p class="settings__my-info-col-1">Password</p>
+                  <p class="settings__my-info-col-2">********</p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="settings__section" id="set-email-and-sec">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">Email and security</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom"  style="display: none;">
+              <div class="settings__section-bottom-content">
+                <form action="" class="form">
+
+                  <div class="settings__security-boxes">
+                    <div class="settings__security-box">
+                      <h4 class="settings__security-box-name">Change email</h4>
+                      <input class="settings__security-input input input--gray" type="email" placeholder="polo@gmail.com">
+                    </div>
+
+                    <div class="settings__security-box">
+                      <h4 class="settings__security-box-name">Change password</h4>
+                      <input class="settings__security-input input input--gray" type="text" placeholder="your current password">
+                      <input class="settings__security-input input input--gray" type="text" placeholder="new password">
+                    </div>
+                  </div>
+
+                  <button class="settings__security-btn button button-clear button--orange button--size-xs">Save</button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings__section" id="set-orders">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">Orders and returns</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom"  style="display: none;">
+
+              <!-- ORDERS -->
+              <div class="settings__section-bottom-content">
+                <div class="settings__order-column-headers">
+                  <p class="settings__order-ch settings__order-ch--1">Order date</p>
+                  <p class="settings__order-ch settings__order-ch--2">Order number</p>
+                  <p class="settings__order-ch settings__order-ch--3">Status</p>
+                </div>
+
+                <ul class="settings__orders-container">
+                  <li class="settings__order-item-container">
+                    <div class="order-item">
+                      <div class="order-item__dn-container">
+                        <p class="order-item__date">19-02-2021</p>
+                        <p class="order-item__number">№054595</p>
+                      </div>
+
+                      <p class="order-item__status">Check order</p>
+
+                      <div class="order-item__img-container">
+                        <img class="order-item__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                      </div>
+
+                      <div class="order-item__name-sq-container">
+                        <p class="order-item__name">MONTECARLO</p>
+
+                        <div class="order-item__sq-container">
+                          <p class="order-item__size">size: 37</p>
+                          <p class="order-item__quantity">quantity: 1</p>
+                        </div>
+                      </div>
+
+                      <p class="order-item__price">2470<span class="valute">aed</span></p>
+                    </div>
+                  </li>
+
+                  <li class="settings__order-item-container">
+                    <div class="order-item">
+                      <div class="order-item__dn-container">
+                        <p class="order-item__date">19-02-2021</p>
+                        <p class="order-item__number">№054596</p>
+                      </div>
+
+                      <p class="order-item__status">Received</p>
+
+                      <div class="order-item__img-container">
+                        <img class="order-item__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                      </div>
+
+                      <div class="order-item__name-sq-container">
+                        <p class="order-item__name">MONTECARLO</p>
+
+                        <div class="order-item__sq-container">
+                          <p class="order-item__size">size: 37</p>
+                          <p class="order-item__quantity">quantity: 1</p>
+                        </div>
+                      </div>
+
+                      <p class="order-item__price">2470<span class="valute">aed</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- NO ORDERS -->
+              <!-- <div class="settings__section-bottom-content">
+                <div class="settings__no-orders">
+                  <img src="styles/img/settings/no-orders.svg" alt="" class="settings__no-orders-img">
+                  <p class="settings__no-orders-caption">You have no orders yet</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="settings__section" id="set-subscribe">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">Subscribe</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom"  style="display: none;">
+              <div class="settings__section-bottom-content">
+                <form action="" class="form settings__subscribe-container">
+                  <p class="settings__subscribe-caption">Receive mailing letters</p>
+                  
+                  <div class="settings__subscribe-toggle">
+                    <input class="settings__subscribe-togle-chb" id="subscribe-toggle" type="checkbox">
+                    <label class="settings__subscribe-togle-chb-lb" for="subscribe-toggle"></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>
-
-    <div class="wrapper">
-      <div class="products-slider-container">
-        <div class="products-slider products-slider--main-page">
-
-          <div class="products-slider__arrow-btn products-slider__arrow-left">
-            <div class="products-slider__arrow-icon m-icon i-arrow-left"></div>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/2/2-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/3/3-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/4/4-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__item products-slider__item--main-page">
-            <a class="products-slider__item-link products-slider__item-link--main-page" href="#">
-              <img class="products-slider__item-img" src="styles/img/products/5/5-1.jpg" alt="Measurement Shoe">
-            </a>
-          </div>
-
-          <div class="products-slider__arrow-btn products-slider__arrow-right">
-            <div class="products-slider__arrow-icon m-icon i-arrow-right"></div>
-          </div>
-        </div>
-
-        <div class="products-slider-more">
-          <a class="products-slider-more__link" href="catalog.html">Look more</a>
-
-          <div class="products-slider-dots-main-page">
-            <!-- dots init container -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-shoes-box">
-      <div class="about-shoes wrapper">
-        <p class="about-shoes__desc">
-          Made from the finest quality materials, our high-heel shoes offer all M33 
-          customers the perfect combination of beauty, style and comfort.<br><br>
-          We invest a lot of time, energy and dedication into producing every pair 
-          to ensure you are comfortable, and have the support to enjoy your life.<br><br>
-          Our shoes are always in a good mood, and we want you to be, too.
-        </p>
-
-        <img class="about-shoes__model-img" src="styles/img/about-shoes/model.jpg" alt="Measurement Model">
-      </div>
-      <div class="about-shoes-box__bg">
-        <img src="styles/img/about-shoes/bg.jpg" alt="Background" class="about-shoes-box__bg-img">
-      </div>
-    </div>
-
-    <div class="wrapper">
-      <div class="founder">
-        <figure class="founder__photo-box">
-          <img src="styles/img/founder/founder.jpg" alt="Hanna Yakutovich" class="founder__img">
-          <figcaption class="founder__name">Hanna Yakutovich, founder</figcaption>
-        </figure>
-
-        <div class="founder__desc">
-          I'll tell you a secret. I have tiny feet. Size 33, or UK size 1. When I was younger 
-          I thought there was something wrong with me. But then I discovered so many other women 
-          who have small feet and face the same challenges. I was always having to wear trainers, 
-          numerous insoles, shopping in the children's sections, settling for something average, 
-          and constantly searching for a pair of shoes I liked.<br><br>
-          The first time I owned a pair of pretty heels was when I started making enough money 
-          to order a custom-made pair. And then I thought that if there are so many women with 
-          small feet, why do we continue to suffer?<br><br>
-          The Idea to create my own shoe label is something that has lived inside me for years, 
-          until I had the confidence to take the plunge. About a year ago, I left a stable job 
-          and was searching for my life's purpose. While meditating, a thought landed in my head: 
-          “Perhaps it is my mission to make women like me happy?” You can guess how 
-          I decided to achieve this mission.<br><br>
-          As a spiritual healer, I am not just producing shoes, but sharing my aura and energy with 
-          every customer. I believe that owning a pair of my M33 shoes will have a positive impact 
-          on the lives of women with small feet. Are you ready to believe this as well?<br><br>
-        </div>
-
-        <img src="styles/img/grey-logo/logo-bg.png" alt="Measurement Logo" class="founder__logo-bg">
       </div>
     </div>
   </main>
@@ -674,11 +654,6 @@
   <div class="footer-placeholder"></div>
 
   <footer class="footer">
-    <div class="footer__top-img-container">
-      <img class="footer__top-img-ph" src="styles/img/footer/top-img.jpg" alt="Footer image">
-      <img class="footer__top-img" src="styles/img/footer/top-img.jpg" alt="Footer image">
-    </div>
-
     <div class="footer__bottom wrapper">
       <div class="footer__boxes-container">
         <div class="footer__box-item">

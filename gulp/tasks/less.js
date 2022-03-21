@@ -2,7 +2,7 @@ import gulpLess from 'gulp-less'; //less preprocessor
 import gulpSourcemaps from 'gulp-sourcemaps'; //sourcemaps
 import rename from 'gulp-rename'; //rename files
 import cleanCss from 'gulp-clean-css'; //css minify
-import webpcss from 'gulp-webpcss'; //output WEBP images
+// import webpcss from 'gulp-webpcss'; //output WEBP images
 import autoprefixer from 'gulp-autoprefixer'; //adding vendor prefixes
 import groupCssMediaQueries from 'gulp-group-css-media-queries'; //grouping media queries
 
@@ -29,13 +29,13 @@ export const less = () => {
             groupCssMediaQueries()
         ))
         // WebP CSS
-        .pipe(app.plugins.if(
-            app.isBuild,
-            webpcss({
-                webpClass: '.webp',
-                noWebpClass: '.no-webp',
-            })
-        ))
+        // .pipe(app.plugins.if(
+        //     app.isBuild,
+        //     webpcss({
+        //         webpClass: '.webp',
+        //         noWebpClass: '.no-webp',
+        //     })
+        // ))
         // Autoprefixer
         .pipe(app.plugins.if(
             app.isBuild,
