@@ -25,7 +25,6 @@ import { less } from './gulp/tasks/less.js';
 import { lessLibs } from './gulp/tasks/lessLibs.js';
 import { js } from './gulp/tasks/js.js';
 import { raster } from './gulp/tasks/raster.js';
-//import { webp } from './gulp/tasks/webp.js';
 import { fonts } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
