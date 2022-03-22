@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measurement</title>
+  <meta name="description" content="Measurement 33 Official Website: Comfortable small sizes premium shoes for brave, confident and determined women, from Dubai.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="styles/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="styles/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="styles/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="styles/img/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1.1.0/dist/magnific-popup.css,npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="styles/general.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1.1.0,npm/slick-carousel@1.8.1,npm/nicescroll@3.7.4,npm/jquery-validation@1.19.3"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+  <div class="page-loading">
+    <img src="styles/img/loading/loading.jpg" class="page-loading__animation"></img>
+  </div>
+  <header class="header">
+    <div class="header__bar">
+      <div class="header__bar-inner wrapper">
+        <nav class="header__navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list__item"><a class="navigation-list__link" href="catalog.html">Shoes</a></li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="delivery.html">Delivery</a></li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="care.html">Shoe care</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__burger-btn">
+          <span class="m-icon i-burger-menu"></span>
+        </div>
+
+        <div class="logo" href="index.html">
+          <a class="logo__link" href="index.html">
+            <img src="styles/img/header/logo.png" alt="Measurement Logo" class="logo__img">
+          </a>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar__item toolbar__item--lang">
+            <span class="m-icon i-globe"></span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--account">
+            <span class="m-icon i-user"></span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--wishlist">
+            <span class="m-icon i-like"></span>
+            <span class="toolbar__item-counter" id="wishlist-counter">3</span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--cart">
+            <span class="m-icon i-bag"></span>
+            <span class="toolbar__item-counter" id="cart-counter">5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-windows wrapper">
+      <!-- ACC REGISTRATION -->
+
+      <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+        <form class="form" action="#" id="account-registration">
+          <input type="text" class="input input--transparent dialog-window__input" placeholder="name">
+          <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
+          <input type="password" class="input input--transparent dialog-window__input dialog-window__input--last" placeholder="password">
+          <input type="submit" class="button button--size-s button--transparent dialog-window__button" value="Create">
+        </form>
+      </div>
+
+      <!-- ACC AUTHORIZE -->
+
+      <!-- <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+        <form class="form" action="#" id="account-authorize">
+          <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
+          <input type="password" class="input input--transparent dialog-window__input  dialog-window__input--last" placeholder="password">
+          <input type="submit" class="button button--size-s button--transparent dialog-window__button" value="Login">
+        </form>
+
+        <a href="recovery.html" class="pass-recovery">Forgot your password?</a>
+
+        <div class="grey-gradient-line"></div>
+
+        <form action="#">
+          <input class="dialog-window__button--create-acc button" type="submit" value="create an account">
+        </form>
+      </div> -->
+
+      <!-- ACC AFTER AUTHORIZE -->
+
+      <!-- <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+
+        <div class="dialog-window__username">Name</div>
+
+        <ul class="account-options">
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-settings"></span>Settings</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-shoes"></span>My orders</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-letter"></span>Subscribe</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-lock"></span>Change password</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-log-out"></span>Log out</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- WISHLIST -->
+
+      <div class="dialog-window hidden" id="wishlist-modal">
+        <h2 class="dialog-window__header">Wishlist</h2>
+
+        <div class="wishlist-box">
+          <div class="wishlist-box__items-container">
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default product-item__price-default--salled">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+
+                  <span class="product-item__new-price">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default product-item__price-default--salled">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+
+                  <span class="product-item__new-price">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WISHLIST EMPTY -->
+
+      <!-- <div class="dialog-window hidden" id="wishlist-modal">
+        <h2 class="dialog-window__header">Wishlist</h2>
+
+        <div class="wishlist-box">
+          <div class="wishlist-box__item-container">
+            <div class="modal-empty-box">
+              <div class="modal-empty-box__empty-icon m-icon i-shoes"></div>
+              <div class="modal-empty-box__empty-text">Add the shoes <br>you like here</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- CART -->
+
+      <div class="dialog-window hidden" id="cart-modal">
+        <h2 class="dialog-window__header">Cart</h2>
+
+        <div class="cart-box">
+          <div class="cart-box__items-container">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default product-item-alt__price-default--salled">2470.00<span class="valute">ead</span></div>
+                  <div class="product-item-alt__new-price">2470.00<span class="valute">aed</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="button button--transparent button--size-m cart-chekout-link" href="checkout.html">Checkout</a>
+      </div>
+
+      <!-- CART EMPTY -->
+
+      <!-- <div class="dialog-window" id="cart-modal">
+        <h2 class="dialog-window__header">Cart</h2>
+
+        <div class="cart-box">
+          <div class="cart-box__items-container">
+            <div class="modal-empty-box">
+              <div class="modal-empty-box__empty-icon m-icon i-shoes"></div>
+              <div class="modal-empty-box__empty-text">Add the shoes you <br>want to buy here</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- SUBSCRIBE US -->
+
+      <div class="subscribe-window hidden">
+        <div class="subscribe-window__bg">
+          <div class="subscribe-window__screen">
+            <img src="styles/img/subscribe-us/letter.svg" alt="Letter Image" class="subscribe-window__letter-img">
+            <form action="" class="form">
+              <label class="subscribe-window__title" for="window-subscribe">Subscribe us</label>
+              <input class="input input--transparent subscribe-window__input" id="window-subscribe" placeholder="email" type="email">
+              <input class="button button--orange button--size-m subscribe-window__submit" type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-menu-parent">
+      <aside class="side-menu side-menu--hidden">
+        <div class="side-menu__bg">
+          <div class="side-menu__block">
+            <div class="side-menu__content-box">
+              <ul class="side-menu__nav">
+                <li class="side-menu__nav-item" id="side-menu-account">
+                  My Account
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="catalog.html">Shoes</a>
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="delivery.html">Delivery</a>
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="care.html">Shoe care</a>
+                </li>
+                <li class="side-menu__nav-item" id="side-menu-wishlist">
+                  Wishlist
+                </li>
+              </ul>
+
+              <form action="" class="side-menu__lang">
+                <button class="side-menu__lang-btn button-clear" type="submit">
+                  <span class="m-icon i-globe"></span>EN
+                </button>
+              </form>
+
+              <div class="side-menu__subscribe">
+                Subscribe us
+              </div>
+
+              <div class="side-menu__follow">
+                <h4 class="side-menu__title">Follow us</h4>
+
+                <div class="side-menu__sotial">
+                  <a href="" class="side-menu__sotial-item"><span class="m-icon i-inst"></span></a>
+                  <a href="" class="side-menu__sotial-item"><span class="m-icon i-facebook"></span></a>
+                </div>
+              </div>
+
+              <div class="side-menu__contact">
+                <h4 class="side-menu__title">Contact us</h4>
+
+                <div class="side-menu__contact-item">
+                  <span class="m-icon i-letter"></span>info@measurement33.com
+                </div>
+                <div class="side-menu__contact-item">
+                  <span class="m-icon i-phone"></span>+971 52 8612284
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="main-content main-content--no-shadow" role="main">
+    <div class="header-placeholder"></div>
+
+    <!-- DELIVERY STEP -->
+
+    <div class="checkout-bg">
+      <div class="checkout-boxes-container wrapper">
+        <div class="checkout-box checkout-main-box">
+          <div class="checkout-main-box__progress-bar">
+           <div class="checkout-main-box__progress-step checkout-main-box__progress-step--1 checkout-main-box__progress-step--active"></div>
+           <div class="checkout-main-box__progress-step checkout-main-box__progress-step--2"></div>
+           <div class="checkout-main-box__progress-step checkout-main-box__progress-step--3"></div>
+         </div>
+
+         <div class="checkout-main-box__step-content">
+          <h2 class="checkout-main-box__step-name">Billing address</h2>
+          <form action="" class="form" id="checkout-step-1">
+            <div class="checkout-main-box__fields-container checkout-main-box__fields-container--step-1">
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-5 checkout-main-box__field-item--mr">
+                <label class="checkout-main-box__field-name" for="">First name</label>
+                <input class="checkout-main-box__field-input input input--gray" type="text" name="s1-fn" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-5">
+                <label class="checkout-main-box__field-name" for="">Last name</label>
+                <input class="checkout-main-box__field-input input input--gray" type="text" name="s1-ln" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-5 checkout-main-box__field-item--mr">
+                <label class="checkout-main-box__field-name" for="">E-mail</label>
+                <input class="checkout-main-box__field-input input input--gray" type="email" name="s1-em" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-5">
+                <label class="checkout-main-box__field-name" for="">Phone  number</label>
+                <input class="checkout-main-box__field-input input input--gray" type="tel" name="s1-pn" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-6">
+                <label class="checkout-main-box__field-name" for="">Address</label>
+                <input class="checkout-main-box__field-input input input--gray" type="text" name="s1-addr" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-6">
+                <label class="checkout-main-box__field-name" for="">Country</label>
+                <input class="checkout-main-box__field-input input input--gray" type="text" name="s1-coun" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-6">
+                <label class="checkout-main-box__field-name" for="">City</label>
+                <input class="checkout-main-box__field-input input input--gray" type="text" name="s1-city" required>
+              </div>
+
+              <div class="checkout-main-box__field-item checkout-main-box__field-item--size-6">
+                <label class="checkout-main-box__field-name" for="">Zip-code</label>
+                <input class="checkout-main-box__field-input input input--gray" type="text" name="s1-zip" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="checkout-box checkout-total-box">
+        <h3 class="checkout-total-box__title">Total</h3>
+
+        <div class="checkout-total-box__orders-container">
+          <div class="checkout-total-box__order-item">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default product-item-alt__price-default--salled">2470.00<span class="valute">ead</span></div>
+                  <div class="product-item-alt__new-price">2470.00<span class="valute">aed</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-total-box__order-item">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-total-box__sum-box">
+          <div class="checkout-total-box__ship-box">
+            <p class="checkout-total-box__ship-title">Shipping</p>
+            <p class="checkout-total-box__ship-price">40<span class="valute">aed</span></p>
+          </div>
+
+          <div class="checkout-total-box__total-sum-box">
+            <p class="checkout-total-box__total-title">total</p>
+            <p class="checkout-total-box__price">4980<span class="valute">AED</span></p>
+          </div>
+        </div>
+
+        <input class="checkout-total-box__btn button button--orange" type="submit" form="checkout-step-1" value="Continue">
+      </div>
+    </div>
+    
+    <!-- PAYMENT STEP -->
+
+    <div class="checkout-bg">
+      <div class="checkout-boxes-container wrapper">
+        <div class="checkout-box checkout-main-box">
+          <div class="checkout-main-box__progress-bar">
+           <div class="checkout-main-box__progress-step checkout-main-box__progress-step--1"></div>
+           <div class="checkout-main-box__progress-step checkout-main-box__progress-step--2 checkout-main-box__progress-step--active"></div>
+           <div class="checkout-main-box__progress-step checkout-main-box__progress-step--3"></div>
+         </div>
+
+         <div class="checkout-main-box__step-content">
+          <h2 class="checkout-main-box__step-name">Payment</h2>
+          <form action="" class="form" id="checkout-step-2">
+            <div class="checkout-main-box__fields-container checkout-main-box__fields-container--step-2">
+              <div class="checkout-main-box__payment-select-box">
+                <h3 class="checkout-main-box__fieldset-name ">Select a Payment Method</h3>
+
+                <div class="checkout-main-box__payment-methods-container">
+                  <div class="checkout-main-box__payment-item" id="checkout-payment-paypal">
+                    <input class="checkout-main-box__payment-radio" type="radio" id="paypal_method" name="checkout-payment-method" required>
+                    <label class="checkout-main-box__payment-label-rd" for="paypal_method">
+                      <img class="checkout-main-box__payment-img" src="styles/img/checkout/paypal.svg" alt="PayPal">
+                    </label>
+                  </div>
+
+                  <div class="checkout-main-box__payment-item" id="checkout-payment-paypal">
+                    <input class="checkout-main-box__payment-radio" type="radio" id="card_method" name="checkout-payment-method" required>
+                    <label class="checkout-main-box__payment-label-rd" for="card_method">
+                      <span class="m-icon i-card"></span>Debit or credit card
+                    </label>
+                  </div>
+                </div>
+
+                <div class="checkout-main-box__card-fields-container">
+                  <h3 class="checkout-main-box__fieldset-name">Card data</h3>
+
+                  <div class="checkout-main-box__field-item checkout-main-box__field-item--size-1 checkout-main-box__field-item--card">
+                    <label class="checkout-main-box__field-name" for="">Cardowner</label>
+                    <input class="checkout-main-box__field-input input input--gray" type="text" name="s2-co" required>
+                  </div>
+
+                  <div class="checkout-main-box__field-item checkout-main-box__field-item--size-2 checkout-main-box__field-item--card">
+                    <label class="checkout-main-box__field-name" for="">Card number</label>
+                    <input class="checkout-main-box__field-input input input--gray" type="text" name="s2-cn" required>
+                  </div>
+
+                  <div class="checkout-main-box__field-item checkout-main-box__field-item--size-3 checkout-main-box__field-item--card">
+                    <label class="checkout-main-box__field-name" for="">Expiration date</label>
+                    <input class="checkout-main-box__field-input input input--gray" type="text" name="s2-ed" required>
+                  </div>
+
+                  <div class="checkout-main-box__field-item checkout-main-box__field-item--size-4 checkout-main-box__field-item--card">
+                    <label class="checkout-main-box__field-name" for="">CVV</label>
+                    <input class="checkout-main-box__field-input input input--gray" type="text" name="s2-cvv" required>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="checkout-box checkout-total-box">
+        <h3 class="checkout-total-box__title">Total</h3>
+
+        <div class="checkout-total-box__orders-container">
+          <div class="checkout-total-box__order-item">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default product-item-alt__price-default--salled">2470.00<span class="valute">ead</span></div>
+                  <div class="product-item-alt__new-price">2470.00<span class="valute">aed</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-total-box__order-item">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-total-box__sum-box">
+          <div class="checkout-total-box__ship-box">
+            <p class="checkout-total-box__ship-title">Shipping</p>
+            <p class="checkout-total-box__ship-price">40<span class="valute">aed</span></p>
+          </div>
+
+          <div class="checkout-total-box__total-sum-box">
+            <p class="checkout-total-box__total-title">total</p>
+            <p class="checkout-total-box__price">4980<span class="valute">AED</span></p>
+          </div>
+        </div>
+
+        <input class="checkout-total-box__btn button button--orange" type="submit" form="checkout-step-2" value="Continue">
+      </div>
+    </div>
+
+    <!-- YOUR ORDER STEP -->
+
+    <div class="checkout-bg">
+      <div class="checkout-boxes-container wrapper">
+        <div class="checkout-box checkout-main-box">
+          <div class="checkout-main-box__progress-bar">
+            <div class="checkout-main-box__progress-step checkout-main-box__progress-step--1"></div>
+            <div class="checkout-main-box__progress-step checkout-main-box__progress-step--2"></div>
+            <div class="checkout-main-box__progress-step checkout-main-box__progress-step--3 checkout-main-box__progress-step--active"></div>
+          </div>
+
+          <div class="checkout-main-box__step-content">
+            <h2 class="checkout-main-box__step-name">Your Order</h2>
+
+            <div class="checkout-main-box__orders-container">
+              <div class="checkout-main-box__order-item">
+                <div class="order-item-compact">
+                  <div class="order-item-compact__img-container">
+                    <img src="styles/img/products/1/1-1.jpg" alt="Shoe" class="order-item-compact__img">
+                  </div>
+
+                  <div class="order-item-compact__product-desc-box">
+                    <p class="order-item-compact__product-name">MONTECARLO</p>
+                    <p class="order-item-compact__quantity">quantity: 1</p>
+                    <p class="order-item-compact__size">size: 36</p>
+                  </div>
+
+                  <div class="order-item-compact__receiver-desc-box">
+                    <p class="order-item-compact__receiver-name">Tatiana Glovo</p>
+                    <p class="order-item-compact__receiver-city">Kyiv</p>
+                    <p class="order-item-compact__receiver-city-zip">Kyiv, 02514</p>
+                  </div>
+
+                  <div class="order-item-compact__receiver-country-box">
+                    <p class="order-item-compact__receiver-country">Ukraine</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout-main-box__order-item">
+                <div class="order-item-compact">
+                  <div class="order-item-compact__img-container">
+                    <img src="styles/img/products/1/1-1.jpg" alt="Shoe" class="order-item-compact__img">
+                  </div>
+
+                  <div class="order-item-compact__product-desc-box">
+                    <p class="order-item-compact__product-name">MONTECARLO</p>
+                    <p class="order-item-compact__quantity">quantity: 1</p>
+                    <p class="order-item-compact__size">size: 36</p>
+                  </div>
+
+                  <div class="order-item-compact__receiver-desc-box">
+                    <p class="order-item-compact__receiver-name">Tatiana Glovo</p>
+                    <p class="order-item-compact__receiver-city">Kyiv</p>
+                    <p class="order-item-compact__receiver-city-zip">Kyiv, 02514</p>
+                  </div>
+
+                  <div class="order-item-compact__receiver-country-box">
+                    <p class="order-item-compact__receiver-country">Ukraine</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="checkout-box checkout-total-box">
+          <h3 class="checkout-total-box__title">Total</h3>
+
+          <div class="checkout-total-box__step-3">
+
+            <div class="checkout-total-box__instructions">
+              <div class="checkout-total-box__instructions-icon m-icon i-shoes"></div>
+              <p class="checkout-total-box__instructions-content">
+                You can see data on <br>payment and condition <br>of goods in the <br>settings section
+              </p>
+            </div>
+
+            <a class="checkout-total-box__btn--step-3 button button--black" href="settings.html">Settings</a>
+            <a class="checkout-total-box__btn--step-3 button button--orange" href="catalog.html">Continue Shopping</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-placeholder"></div>
+
+  <footer class="footer">
+    <div class="footer__bottom wrapper">
+      <div class="footer__boxes-container">
+        <div class="footer__box-item">
+          <img class="footer__logo" src="styles/img/footer/footer-logo.png" alt="Measurement Logo">
+          <div class="footer__rights">© <span class="footer__rights-year">2021</span> MEASuREMENT THIRTY THREE </div>
+        </div>
+
+        <div class="footer__box-item">
+          <form class="form" action="#">
+            <label class="footer__label" for="footer-subscribe">Subscribe us</label>
+            <div class="footer__subscribe-input-container">
+              <input class="footer__subscribe-input" type="email" id="footer-subscribe" placeholder="email">
+              <button class="footer__subscribe-submit button-clear" type="submit"><span class="m-icon i-cheked"></span></button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer__box-item">
+          <h4 class="footer__label">Follow us</h4>
+
+          <div class="footer__sotial-items-container">
+            <div class="footer__sotial-item">
+              <a href="#"><span class="m-icon i-inst"></span></a>
+            </div>
+            <div class="footer__sotial-item">
+              <a href="#"><span class="m-icon i-facebook"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__box-item">
+          <h4 class="footer__label">Contact us</h4>
+
+          <div class="footer__contact-row">
+            <span class="footer__contact-row-icon m-icon i-letter"></span><span class="contact-mail">info@measurement33.com</span>
+          </div>
+          <div class="footer__contact-row">
+            <span class="footer__contact-row-icon m-icon i-phone"></span><span class="contact-phone">+971 52 8612284</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1.1.0/dist/magnific-popup.css,npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="styles/general.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1.1.0,npm/slick-carousel@1.8.1,npm/nicescroll@3.7.4"></script>
+  <script src="scripts/main.js"></script>
+
+</head>
+<body>
+  <div class="page-loading">
+    <img src="styles/img/loading/loading.jpg" class="page-loading__animation"></img>
+  </div>
+  <header class="header">
+    <div class="header__bar">
+      <div class="header__bar-inner wrapper">
+        <nav class="header__navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list__item"><a class="navigation-list__link" href="catalog.html">Shoes</a></li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="delivery.html">Delivery</a></li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="care.html">Shoe care</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__burger-btn">
+          <span class="m-icon i-burger-menu"></span>
+        </div>
+
+        <div class="logo" href="index.html">
+          <a class="logo__link" href="index.html">
+            <img src="styles/img/header/logo.png" alt="Measurement Logo" class="logo__img">
+          </a>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar__item toolbar__item--lang">
+            <span class="m-icon i-globe"></span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--account">
+            <span class="m-icon i-user"></span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--wishlist">
+            <span class="m-icon i-like"></span>
+            <span class="toolbar__item-counter" id="wishlist-counter">3</span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--cart">
+            <span class="m-icon i-bag"></span>
+            <span class="toolbar__item-counter" id="cart-counter">5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-windows wrapper">
+      <!-- ACC REGISTRATION -->
+
+      <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+        <form class="form" action="#" id="account-registration">
+          <input type="text" class="input input--transparent dialog-window__input" placeholder="name">
+          <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
+          <input type="password" class="input input--transparent dialog-window__input dialog-window__input--last" placeholder="password">
+          <input type="submit" class="button button--size-s button--transparent dialog-window__button" value="Create">
+        </form>
+      </div>
+
+      <!-- ACC AUTHORIZE -->
+
+      <!-- <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+        <form class="form" action="#" id="account-authorize">
+          <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
+          <input type="password" class="input input--transparent dialog-window__input  dialog-window__input--last" placeholder="password">
+          <input type="submit" class="button button--size-s button--transparent dialog-window__button" value="Login">
+        </form>
+
+        <a href="recovery.html" class="pass-recovery">Forgot your password?</a>
+
+        <div class="grey-gradient-line"></div>
+
+        <form action="#">
+          <input class="dialog-window__button--create-acc button" type="submit" value="create an account">
+        </form>
+      </div> -->
+
+      <!-- ACC AFTER AUTHORIZE -->
+
+      <!-- <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+
+        <div class="dialog-window__username">Name</div>
+
+        <ul class="account-options">
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-settings"></span>Settings</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-shoes"></span>My orders</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-letter"></span>Subscribe</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-lock"></span>Change password</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-log-out"></span>Log out</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- WISHLIST -->
+
+      <div class="dialog-window hidden" id="wishlist-modal">
+        <h2 class="dialog-window__header">Wishlist</h2>
+
+        <div class="wishlist-box">
+          <div class="wishlist-box__items-container">
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default product-item__price-default--salled">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+
+                  <span class="product-item__new-price">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default product-item__price-default--salled">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+
+                  <span class="product-item__new-price">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WISHLIST EMPTY -->
+
+      <!-- <div class="dialog-window hidden" id="wishlist-modal">
+        <h2 class="dialog-window__header">Wishlist</h2>
+
+        <div class="wishlist-box">
+          <div class="wishlist-box__item-container">
+            <div class="modal-empty-box">
+              <div class="modal-empty-box__empty-icon m-icon i-shoes"></div>
+              <div class="modal-empty-box__empty-text">Add the shoes <br>you like here</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- CART -->
+
+      <div class="dialog-window hidden" id="cart-modal">
+        <h2 class="dialog-window__header">Cart</h2>
+
+        <div class="cart-box">
+          <div class="cart-box__items-container">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default product-item-alt__price-default--salled">2470.00<span class="valute">ead</span></div>
+                  <div class="product-item-alt__new-price">2470.00<span class="valute">aed</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="button button--transparent button--size-m cart-chekout-link" href="checkout.html">Checkout</a>
+      </div>
+
+      <!-- CART EMPTY -->
+
+      <!-- <div class="dialog-window" id="cart-modal">
+        <h2 class="dialog-window__header">Cart</h2>
+
+        <div class="cart-box">
+          <div class="cart-box__items-container">
+            <div class="modal-empty-box">
+              <div class="modal-empty-box__empty-icon m-icon i-shoes"></div>
+              <div class="modal-empty-box__empty-text">Add the shoes you <br>want to buy here</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- SUBSCRIBE US -->
+
+      <div class="subscribe-window hidden">
+        <div class="subscribe-window__bg">
+          <div class="subscribe-window__screen">
+            <img src="styles/img/subscribe-us/letter.svg" alt="Letter Image" class="subscribe-window__letter-img">
+            <form action="" class="form">
+              <label class="subscribe-window__title" for="window-subscribe">Subscribe us</label>
+              <input class="input input--transparent subscribe-window__input" id="window-subscribe" placeholder="email" type="email">
+              <input class="button button--orange button--size-m subscribe-window__submit" type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-menu-parent">
+      <aside class="side-menu side-menu--hidden">
+        <div class="side-menu__bg">
+          <div class="side-menu__block">
+            <div class="side-menu__content-box">
+              <ul class="side-menu__nav">
+                <li class="side-menu__nav-item" id="side-menu-account">
+                  My Account
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="catalog.html">Shoes</a>
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="delivery.html">Delivery</a>
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="care.html">Shoe care</a>
+                </li>
+                <li class="side-menu__nav-item" id="side-menu-wishlist">
+                  Wishlist
+                </li>
+              </ul>
+
+              <form action="" class="side-menu__lang">
+                <button class="side-menu__lang-btn button-clear" type="submit">
+                  <span class="m-icon i-globe"></span>EN
+                </button>
+              </form>
+
+              <div class="side-menu__subscribe">
+                Subscribe us
+              </div>
+
+              <div class="side-menu__follow">
+                <h4 class="side-menu__title">Follow us</h4>
+
+                <div class="side-menu__sotial">
+                  <a href="" class="side-menu__sotial-item"><span class="m-icon i-inst"></span></a>
+                  <a href="" class="side-menu__sotial-item"><span class="m-icon i-facebook"></span></a>
+                </div>
+              </div>
+
+              <div class="side-menu__contact">
+                <h4 class="side-menu__title">Contact us</h4>
+
+                <div class="side-menu__contact-item">
+                  <span class="m-icon i-letter"></span>info@measurement33.com
+                </div>
+                <div class="side-menu__contact-item">
+                  <span class="m-icon i-phone"></span>+971 52 8612284
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="main-content" role="main">
+    <div class="header-placeholder"></div>
+
+    <div class="catalog-top">
+      <img src="styles/img/catalog-top/top_page.jpg" alt="Measurement Products" class="catalog-top__img">
+    </div>
+
+    <div class="catalog-filter-btn wrapper">
+      <div class="catalog-filter-btn__btn catalog-filter__btn--disabled button button--orange button--size-xs">Filter</div>
+    </div>
+
+    <div class="catalog-main-box wrapper">
+      <div class="catalog-products wrapper">
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p1">
+              <label class="product-item__label-chb" for="p1"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p2">
+              <label class="product-item__label-chb" for="p2"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link product-item__img-link--out-of-stock">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p3">
+              <label class="product-item__label-chb" for="p3"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p4">
+              <label class="product-item__label-chb" for="p4"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p5">
+              <label class="product-item__label-chb" for="p5"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p6">
+              <label class="product-item__label-chb" for="p6"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p7">
+              <label class="product-item__label-chb" for="p7"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p8">
+              <label class="product-item__label-chb" for="p8"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p9">
+              <label class="product-item__label-chb" for="p9"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p10">
+              <label class="product-item__label-chb" for="p10"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p11">
+              <label class="product-item__label-chb" for="p11"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p12">
+              <label class="product-item__label-chb" for="p12"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p13">
+              <label class="product-item__label-chb" for="p13"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p14">
+              <label class="product-item__label-chb" for="p14"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-products__item">
+          <div class="product-item">
+            <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+              <input class="product-item__checkbox" type="checkbox" id="p15">
+              <label class="product-item__label-chb" for="p15"></label>
+            </form>
+
+            <a href="simple-product.html" class="product-item__img-link">
+              <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+            </a>
+
+            <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+            <div class="product-item__price">
+              <span class="product-item__price-default">
+                <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-filter catalog-filter--closed">
+        <div class="catalog-filter__inner wrapper">
+          <div class="catalog-filter__close-btn close-btn">
+            <span class="m-icon i-close"></span>
+          </div>
+          <form class="form" action="">
+            <div class="catalog-filter__categories-container">
+              <div class="catalog-filter__category-box">
+                <h4 class="catalog-filter__category-title">Heel height</h4>
+
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="low_heel" type="checkbox">
+                  <label class="catalog-filter__item-label" for="low_heel">low heel</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="med_heel" type="checkbox">
+                  <label class="catalog-filter__item-label" for="med_heel">medium heel</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="high_heel" type="checkbox">
+                  <label class="catalog-filter__item-label" for="high_heel">high heel</label>
+                </div>
+              </div>
+
+              <div class="catalog-filter__category-box">
+                <h4 class="catalog-filter__category-title">Color</h4>
+
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="pink" type="checkbox">
+                  <label class="catalog-filter__item-label" for="pink">pink</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="white" type="checkbox">
+                  <label class="catalog-filter__item-label" for="white">white</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="green" type="checkbox">
+                  <label class="catalog-filter__item-label" for="green">green</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="gold" type="checkbox">
+                  <label class="catalog-filter__item-label" for="gold">gold</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="brown" type="checkbox">
+                  <label class="catalog-filter__item-label" for="brown">brown</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="red" type="checkbox">
+                  <label class="catalog-filter__item-label" for="red">red</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="multicolor" type="checkbox">
+                  <label class="catalog-filter__item-label" for="multicolor">multicolor</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="shade" type="checkbox">
+                  <label class="catalog-filter__item-label" for="shade">neutral shade</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="silver" type="checkbox">
+                  <label class="catalog-filter__item-label" for="silver">silver</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="gray" type="checkbox">
+                  <label class="catalog-filter__item-label" for="gray">gray</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="blue" type="checkbox">
+                  <label class="catalog-filter__item-label" for="blue">blue</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="black" type="checkbox">
+                  <label class="catalog-filter__item-label" for="black">black</label>
+                </div>
+
+              </div>
+
+              <div class="catalog-filter__category-box">
+                <h4 class="catalog-filter__category-title">Size</h4>
+
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="33" type="checkbox">
+                  <label class="catalog-filter__item-label" for="33">33</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="33.5" type="checkbox">
+                  <label class="catalog-filter__item-label" for="33.5">33.5</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="34" type="checkbox">
+                  <label class="catalog-filter__item-label" for="34">34</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="35" type="checkbox">
+                  <label class="catalog-filter__item-label" for="35">35</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="36" type="checkbox">
+                  <label class="catalog-filter__item-label" for="36">36</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="37" type="checkbox">
+                  <label class="catalog-filter__item-label" for="37">37</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="38" type="checkbox">
+                  <label class="catalog-filter__item-label" for="38">38</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="39" type="checkbox">
+                  <label class="catalog-filter__item-label" for="39">39</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="40" type="checkbox">
+                  <label class="catalog-filter__item-label" for="40">40</label>
+                </div>
+                <div class="catalog-filter__item">
+                  <input class="catalog-filter__item-checkbox" id="41" type="checkbox">
+                  <label class="catalog-filter__item-label" for="41">41</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-filter__btns-container">
+              <input class="catalog-filter__btn button--black button button--size-xs" type="reset" value="Clear">
+              <input class="catalog-filter__btn button--orange button button--size-xs" type="submit" value="Apply">
+            </div>
+          </form>
+        </div>  
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-placeholder"></div>
+
+  <footer class="footer">
+    <div class="footer__top-img-container">
+      <img class="footer__top-img-ph" src="styles/img/footer/top-img.jpg" alt="Footer image">
+      <img class="footer__top-img" src="styles/img/footer/top-img.jpg" alt="Footer image">
+    </div>
+
+    <div class="footer__bottom wrapper">
+      <div class="footer__boxes-container">
+        <div class="footer__box-item">
+          <img class="footer__logo" src="styles/img/footer/footer-logo.png" alt="Measurement Logo">
+          <div class="footer__rights">© <span class="footer__rights-year">2021</span> MEASuREMENT THIRTY THREE </div>
+        </div>
+
+        <div class="footer__box-item">
+          <form class="form" action="#">
+            <label class="footer__label" for="footer-subscribe">Subscribe us</label>
+            <div class="footer__subscribe-input-container">
+              <input class="footer__subscribe-input" type="email" id="footer-subscribe" placeholder="email">
+              <button class="footer__subscribe-submit button-clear" type="submit"><span class="m-icon i-cheked"></span></button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer__box-item">
+          <h4 class="footer__label">Follow us</h4>
+
+          <div class="footer__sotial-items-container">
+            <div class="footer__sotial-item">
+              <a href="#"><span class="m-icon i-inst"></span></a>
+            </div>
+            <div class="footer__sotial-item">
+              <a href="#"><span class="m-icon i-facebook"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__box-item">
+          <h4 class="footer__label">Contact us</h4>
+
+          <div class="footer__contact-row">
+            <span class="footer__contact-row-icon m-icon i-letter"></span><span class="contact-mail">info@measurement33.com</span>
+          </div>
+          <div class="footer__contact-row">
+            <span class="footer__contact-row-icon m-icon i-phone"></span><span class="contact-phone">+971 52 8612284</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

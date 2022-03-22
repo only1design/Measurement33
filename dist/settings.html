@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measurement</title>
+  <meta name="description" content="Measurement 33 Official Website: Comfortable small sizes premium shoes for brave, confident and determined women, from Dubai.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="styles/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="styles/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="styles/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="styles/img/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1.1.0/dist/magnific-popup.css,npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="styles/general.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1.1.0,npm/slick-carousel@1.8.1,npm/nicescroll@3.7.4,npm/jquery-validation@1.19.3"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+  <div class="page-loading">
+    <img src="styles/img/loading/loading.jpg" class="page-loading__animation"></img>
+  </div>
+  <header class="header">
+    <div class="header__bar">
+      <div class="header__bar-inner wrapper">
+        <nav class="header__navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list__item"><a class="navigation-list__link" href="catalog.html">Shoes</a></li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="delivery.html">Delivery</a></li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="care.html">Shoe care</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__burger-btn">
+          <span class="m-icon i-burger-menu"></span>
+        </div>
+
+        <div class="logo" href="index.html">
+          <a class="logo__link" href="index.html">
+            <img src="styles/img/header/logo.png" alt="Measurement Logo" class="logo__img">
+          </a>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar__item toolbar__item--lang">
+            <span class="m-icon i-globe"></span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--account">
+            <span class="m-icon i-user"></span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--wishlist">
+            <span class="m-icon i-like"></span>
+            <span class="toolbar__item-counter" id="wishlist-counter">3</span>
+          </div>
+
+          <div class="toolbar__item toolbar__item--cart">
+            <span class="m-icon i-bag"></span>
+            <span class="toolbar__item-counter" id="cart-counter">5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-windows wrapper">
+      <!-- ACC REGISTRATION -->
+
+      <!-- <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+        <form class="form" action="#" id="account-registration">
+          <input type="text" class="input input--transparent dialog-window__input" placeholder="name">
+          <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
+          <input type="password" class="input input--transparent dialog-window__input dialog-window__input--last" placeholder="password">
+          <input type="submit" class="button button--size-s button--transparent dialog-window__button" value="Create">
+        </form>
+      </div> -->
+
+      <!-- ACC AUTHORIZE -->
+
+      <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+        <form class="form" action="#" id="account-authorize">
+          <input type="email" class="input input--transparent dialog-window__input" placeholder="email">
+          <input type="password" class="input input--transparent dialog-window__input  dialog-window__input--last" placeholder="password">
+          <input type="submit" class="button button--size-s button--transparent dialog-window__button" value="Login">
+        </form>
+
+        <a href="recovery.html" class="pass-recovery">Forgot your password?</a>
+
+        <div class="grey-gradient-line"></div>
+
+        <form action="#">
+          <input class="dialog-window__button--create-acc button" type="submit" value="create an account">
+        </form>
+      </div>
+
+      <!-- ACC AFTER AUTHORIZE -->
+
+      <!-- <div class="dialog-window hidden" id="account-modal">
+        <h2 class="dialog-window__header">Account</h2>
+
+        <div class="dialog-window__username">Name</div>
+
+        <ul class="account-options">
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-settings"></span>Settings</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-shoes"></span>My orders</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-letter"></span>Subscribe</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-lock"></span>Change password</a>
+          </li>
+          <li class="account-options__item">
+            <a href="#" class="account-options__link"><span class="m-icon i-log-out"></span>Log out</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- WISHLIST -->
+
+      <div class="dialog-window hidden" id="wishlist-modal">
+        <h2 class="dialog-window__header">Wishlist</h2>
+
+        <div class="wishlist-box">
+          <div class="wishlist-box__items-container">
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default product-item__price-default--salled">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+
+                  <span class="product-item__new-price">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default product-item__price-default--salled">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+
+                  <span class="product-item__new-price">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-box__item-box">
+              <div class="product-item">
+                <form class="product-item__like-btn product-item__like-btn--wishlist" id="" action="#">
+                  <span class="product-item__like-btn-icon m-icon i-like"></span>
+                  <button class="product-item__like-btn-icon product-item__remove button" type="submit"><span class="m-icon i-like-filled"></span></button>
+                </form>
+
+                <a href="simple-product.html" class="product-item__img-link">
+                  <img class="product-item__img" src="styles/img/products/1/1-1.jpg" alt="Measurement Shoe">
+                </a>
+
+                <h3 class="product-item__title"><a class="product-item__title-link" href="simple-product.html">Montecarlo</a></h3>
+
+                <div class="product-item__price">
+                  <span class="product-item__price-default">
+                    <span class="product-price">2470.00</span><span class="product-price-valute valute">aed</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WISHLIST EMPTY -->
+
+      <!-- <div class="dialog-window hidden" id="wishlist-modal">
+        <h2 class="dialog-window__header">Wishlist</h2>
+
+        <div class="wishlist-box">
+          <div class="wishlist-box__item-container">
+            <div class="modal-empty-box">
+              <div class="modal-empty-box__empty-icon m-icon i-shoes"></div>
+              <div class="modal-empty-box__empty-text">Add the shoes <br>you like here</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- CART -->
+
+      <div class="dialog-window hidden" id="cart-modal">
+        <h2 class="dialog-window__header">Cart</h2>
+
+        <div class="cart-box">
+          <div class="cart-box__items-container">
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default product-item-alt__price-default--salled">2470.00<span class="valute">ead</span></div>
+                  <div class="product-item-alt__new-price">2470.00<span class="valute">aed</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-alt">
+              <div class="product-item-alt__close">
+                <form class="form" action="#">
+                  <button class="button-clear close-btn" type="submit"><span class="m-icon i-close"></span></button>
+                </form>
+              </div>
+
+              <div class="product-item-alt__top">
+                <div class="product-item-alt__img-container">
+                  <img class="product-item-alt__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                </div>
+
+                <div class="product-item-alt__desc">
+                  <h3 class="product-item-alt__title">montecarlo</h3>
+
+                  <div class="product-item-alt__sub-desc">
+                    <div class="product-item-alt__quantity">quantity: <span class="product-item-alt__quantity-num">1</span></div>
+                    <div class="product-item-alt__size">size: <span class="product-item-alt__size-num">1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item-alt__bottom">
+                <div class="product-item-alt__price">
+                  <div class="product-item-alt__price-default">2470.00<span class="valute">ead</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="button button--transparent button--size-m cart-chekout-link" href="checkout.html">Checkout</a>
+      </div>
+
+      <!-- CART EMPTY -->
+
+      <!-- <div class="dialog-window" id="cart-modal">
+        <h2 class="dialog-window__header">Cart</h2>
+
+        <div class="cart-box">
+          <div class="cart-box__items-container">
+            <div class="modal-empty-box">
+              <div class="modal-empty-box__empty-icon m-icon i-shoes"></div>
+              <div class="modal-empty-box__empty-text">Add the shoes you <br>want to buy here</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- SUBSCRIBE US -->
+
+      <div class="subscribe-window hidden">
+        <div class="subscribe-window__bg">
+          <div class="subscribe-window__screen">
+            <img src="styles/img/subscribe-us/letter.svg" alt="Letter Image" class="subscribe-window__letter-img">
+            <form action="" class="form">
+              <label class="subscribe-window__title" for="window-subscribe">Subscribe us</label>
+              <input class="input input--transparent subscribe-window__input" id="window-subscribe" placeholder="email" type="email">
+              <input class="button button--orange button--size-m subscribe-window__submit" type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-menu-parent">
+      <aside class="side-menu side-menu--hidden">
+        <div class="side-menu__bg">
+          <div class="side-menu__block">
+            <div class="side-menu__content-box">
+              <ul class="side-menu__nav">
+                <li class="side-menu__nav-item" id="side-menu-account">
+                  My Account
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="catalog.html">Shoes</a>
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="delivery.html">Delivery</a>
+                </li>
+                <li class="side-menu__nav-item">
+                  <a class="side-menu__nav-item-link" href="care.html">Shoe care</a>
+                </li>
+                <li class="side-menu__nav-item" id="side-menu-wishlist">
+                  Wishlist
+                </li>
+              </ul>
+
+              <form action="" class="side-menu__lang">
+                <button class="side-menu__lang-btn button-clear" type="submit">
+                  <span class="m-icon i-globe"></span>EN
+                </button>
+              </form>
+
+              <div class="side-menu__subscribe">
+                Subscribe us
+              </div>
+
+              <div class="side-menu__follow">
+                <h4 class="side-menu__title">Follow us</h4>
+
+                <div class="side-menu__sotial">
+                  <a href="" class="side-menu__sotial-item"><span class="m-icon i-inst"></span></a>
+                  <a href="" class="side-menu__sotial-item"><span class="m-icon i-facebook"></span></a>
+                </div>
+              </div>
+
+              <div class="side-menu__contact">
+                <h4 class="side-menu__title">Contact us</h4>
+
+                <div class="side-menu__contact-item">
+                  <span class="m-icon i-letter"></span>info@measurement33.com
+                </div>
+                <div class="side-menu__contact-item">
+                  <span class="m-icon i-phone"></span>+971 52 8612284
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="main-content main-content--no-shadow" role="main">
+    <div class="header-placeholder"></div>
+
+    <div class="settings blur-bg">
+      <div class="wrapper">
+
+        <h1 class="settings__title">Settings</h1>
+
+        <div class="settings__sections-container">
+          <div class="settings__section" id="set-my-information">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">My information</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom" style="display: none;">
+              <div class="settings__section-bottom-content">
+                <div class="settings__my-info-row">
+                  <p class="settings__my-info-col-1">Name</p>
+                  <p class="settings__my-info-col-2">Tatiana</p>
+                </div>
+
+                <div class="settings__my-info-row">
+                  <p class="settings__my-info-col-1">E-mail</p>
+                  <p class="settings__my-info-col-2">polo@mail.com</p>
+                </div>
+
+                <div class="settings__my-info-row">
+                  <p class="settings__my-info-col-1">Password</p>
+                  <p class="settings__my-info-col-2">********</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings__section" id="set-email-and-sec">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">Email and security</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom"  style="display: none;">
+              <div class="settings__section-bottom-content">
+                <form action="" class="form">
+
+                  <div class="settings__security-boxes">
+                    <div class="settings__security-box">
+                      <h4 class="settings__security-box-name">Change email</h4>
+                      <input class="settings__security-input input input--gray" type="email" placeholder="polo@gmail.com">
+                    </div>
+
+                    <div class="settings__security-box">
+                      <h4 class="settings__security-box-name">Change password</h4>
+                      <input class="settings__security-input input input--gray" type="text" placeholder="your current password">
+                      <input class="settings__security-input input input--gray" type="text" placeholder="new password">
+                    </div>
+                  </div>
+
+                  <button class="settings__security-btn button button-clear button--orange button--size-xs">Save</button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings__section" id="set-orders">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">Orders and returns</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom"  style="display: none;">
+
+              <!-- ORDERS -->
+              <div class="settings__section-bottom-content">
+                <div class="settings__order-column-headers">
+                  <p class="settings__order-ch settings__order-ch--1">Order date</p>
+                  <p class="settings__order-ch settings__order-ch--2">Order number</p>
+                  <p class="settings__order-ch settings__order-ch--3">Status</p>
+                </div>
+
+                <ul class="settings__orders-container">
+                  <li class="settings__order-item-container">
+                    <div class="order-item">
+                      <div class="order-item__dn-container">
+                        <p class="order-item__date">19-02-2021</p>
+                        <p class="order-item__number">№054595</p>
+                      </div>
+
+                      <p class="order-item__status">Check order</p>
+
+                      <div class="order-item__img-container">
+                        <img class="order-item__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                      </div>
+
+                      <div class="order-item__name-sq-container">
+                        <p class="order-item__name">MONTECARLO</p>
+
+                        <div class="order-item__sq-container">
+                          <p class="order-item__size">size: 37</p>
+                          <p class="order-item__quantity">quantity: 1</p>
+                        </div>
+                      </div>
+
+                      <p class="order-item__price">2470<span class="valute">aed</span></p>
+                    </div>
+                  </li>
+
+                  <li class="settings__order-item-container">
+                    <div class="order-item">
+                      <div class="order-item__dn-container">
+                        <p class="order-item__date">19-02-2021</p>
+                        <p class="order-item__number">№054596</p>
+                      </div>
+
+                      <p class="order-item__status">Received</p>
+
+                      <div class="order-item__img-container">
+                        <img class="order-item__img" src="styles/img/products/1/1-1.jpg" alt="Shoe">
+                      </div>
+
+                      <div class="order-item__name-sq-container">
+                        <p class="order-item__name">MONTECARLO</p>
+
+                        <div class="order-item__sq-container">
+                          <p class="order-item__size">size: 37</p>
+                          <p class="order-item__quantity">quantity: 1</p>
+                        </div>
+                      </div>
+
+                      <p class="order-item__price">2470<span class="valute">aed</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- NO ORDERS -->
+              <!-- <div class="settings__section-bottom-content">
+                <div class="settings__no-orders">
+                  <img src="styles/img/settings/no-orders.svg" alt="" class="settings__no-orders-img">
+                  <p class="settings__no-orders-caption">You have no orders yet</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="settings__section" id="set-subscribe">
+            <div class="settings__section-top">
+              <h3 class="settings__section-header">Subscribe</h3>
+              <div class="settings__section-arrow">
+                <span class="m-icon i-arrow-down"></span>
+              </div>
+            </div>
+
+            <div class="settings__section-bottom"  style="display: none;">
+              <div class="settings__section-bottom-content">
+                <form action="" class="form settings__subscribe-container">
+                  <p class="settings__subscribe-caption">Receive mailing letters</p>
+                  
+                  <div class="settings__subscribe-toggle">
+                    <input class="settings__subscribe-togle-chb" id="subscribe-toggle" type="checkbox">
+                    <label class="settings__subscribe-togle-chb-lb" for="subscribe-toggle"></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-placeholder"></div>
+
+  <footer class="footer">
+    <div class="footer__bottom wrapper">
+      <div class="footer__boxes-container">
+        <div class="footer__box-item">
+          <img class="footer__logo" src="styles/img/footer/footer-logo.png" alt="Measurement Logo">
+          <div class="footer__rights">© <span class="footer__rights-year">2021</span> MEASuREMENT THIRTY THREE </div>
+        </div>
+
+        <div class="footer__box-item">
+          <form class="form" action="#">
+            <label class="footer__label" for="footer-subscribe">Subscribe us</label>
+            <div class="footer__subscribe-input-container">
+              <input class="footer__subscribe-input" type="email" id="footer-subscribe" placeholder="email">
+              <button class="footer__subscribe-submit button-clear" type="submit"><span class="m-icon i-cheked"></span></button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer__box-item">
+          <h4 class="footer__label">Follow us</h4>
+
+          <div class="footer__sotial-items-container">
+            <div class="footer__sotial-item">
+              <a href="#"><span class="m-icon i-inst"></span></a>
+            </div>
+            <div class="footer__sotial-item">
+              <a href="#"><span class="m-icon i-facebook"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__box-item">
+          <h4 class="footer__label">Contact us</h4>
+
+          <div class="footer__contact-row">
+            <span class="footer__contact-row-icon m-icon i-letter"></span><span class="contact-mail">info@measurement33.com</span>
+          </div>
+          <div class="footer__contact-row">
+            <span class="footer__contact-row-icon m-icon i-phone"></span><span class="contact-phone">+971 52 8612284</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
