@@ -21,7 +21,7 @@ const path = {
         less: `${srcFolder}/less/general.less`,
         lessLibs: [],
         fontsCss: `${srcFolder}/less/fonts.less`,
-        raster: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,svg,ico}`,
+        raster: `${srcFolder}/img/**/*.*`,
         toWebp: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
         svg: `${srcFolder}/img/**/*.svg`,
     },
