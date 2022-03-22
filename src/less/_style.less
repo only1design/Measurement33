@@ -1737,25 +1737,48 @@ body {
   }
 
   &__item-checkbox {
-    display: inline-block;
-    font-size: 21px;
-    width: 1em;
-    height: 1em;
-    margin-right: 9px;
-    border: 1px solid #000;
+    // display: inline-block;
+    // font-size: 21px;
+    // width: 1em;
+    // height: 1em;
+    // margin-right: 9px;
+    // border: 1px solid #000;
 
+    position: absolute;
+    left: -9999px;
+    cursor: pointer;
 
-    &--checked {
+    & + .catalog-filter__item-label:hover:before {
+      border: 1px solid @orange;
+      transition: all .2s linear;
+    }
+    &:checked + .catalog-filter__item-label:before {
       background: @orange;
       border: 1px solid @orange;
-
+      
       transition: all .2s linear;
     }
   }
-
+  
   &__item-label {
+    padding-left: 1.5em;
     font-size: 18px;
     cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0em;
+      transition: all .2s linear;
+
+      display: inline-block;
+      font-size: 21px;
+      width: 1em;
+      height: 1em;
+      border: 1px solid #000;
+    }
   }
 
   &__btns-container {
