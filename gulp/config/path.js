@@ -6,7 +6,7 @@ const srcFolder = './src';
 
 const path = {
     build: {
-        js: `${buildFolder}/js/`,
+        js: `${buildFolder}/scripts/`,
         html: `${buildFolder}/`,
         files: `${buildFolder}/files/`,
         css: `${buildFolder}/styles/`,
@@ -14,7 +14,7 @@ const path = {
         images: `${buildFolder}/styles/img/`,
     },
     src: {
-        js: `${srcFolder}/js/app.js`,
+        js: `${srcFolder}/js/**/*.*`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`,
         fonts: `${srcFolder}/fonts/**/*.*`,
