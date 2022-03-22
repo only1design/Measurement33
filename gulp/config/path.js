@@ -11,7 +11,7 @@ const path = {
         files: `${buildFolder}/files/`,
         css: `${buildFolder}/styles/`,
         fonts: `${buildFolder}/fonts/`,
-        images: `${buildFolder}/img/`,
+        images: `${buildFolder}/styles/img/`,
     },
     src: {
         js: `${srcFolder}/js/app.js`,
