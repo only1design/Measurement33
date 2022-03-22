@@ -2686,12 +2686,16 @@ body {
 
   &__security-boxes {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 
   &__security-box {
     width: 30%;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__security-box-name {
