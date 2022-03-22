@@ -55,7 +55,7 @@ export const less = () => {
             })
         ))
         // CSS minificator
-        //.pipe(app.gulp.dest(app.path.build.css)) // Uncomment for dublicate unminifed css
+        .pipe(app.gulp.dest(app.path.build.css)) // Uncomment for dublicate unminifed css
         .pipe(app.plugins.if(
             app.isBuild,
             cleanCss()
