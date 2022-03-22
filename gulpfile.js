@@ -26,7 +26,7 @@ import { lessLibs } from './gulp/tasks/lessLibs.js';
 import { js } from './gulp/tasks/js.js';
 import { raster } from './gulp/tasks/raster.js';
 //import { webp } from './gulp/tasks/webp.js';
-//import { fonts } from './gulp/tasks/fonts.js';
+import { fonts } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
 
@@ -42,7 +42,7 @@ function watcher() {
 
 // Main tasks
 //const mainTasks = gulp.parallel(copy, html, less, lessLibs, js, raster, webp, fonts);
-const mainTasks = gulp.parallel(copy, html, less, lessLibs, js, raster);
+const mainTasks = gulp.parallel(copy, html, less, lessLibs, js, raster, fonts);
 
 // Building a task execution script
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
