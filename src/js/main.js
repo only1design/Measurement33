@@ -5,6 +5,7 @@ import getFooterHeight from "./modules/getFooterHeight.js";
 import errorWindow from "./modules/errorWindow.js";
 import headerPlaceholder from "./modules/headerPlaceholder.js";
 import footerPlaceholder from "./modules/footerPlaceholder.js";
+import modals from "./modules/modals.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -13,72 +14,7 @@ $(window).on('load', function() {
   errorWindow();
   headerPlaceholder();
   footerPlaceholder();
-
-  //account menu
-  if ($('#account-modal').length){
-    var account_menu = $("#account-modal"),
-    account_menu_btn = $('.toolbar .toolbar__item .i-user'),
-    account_menu_side_btn = $("#side-menu-account"),
-    account_menu_close_btn = $('.header .account_menu .close'),
-    account_menu_animation_show_class = 'popup-show-animation',
-    account_menu_animation_hide_class = 'popup-hide-animation',
-    account_menu_hide_class = 'hidden';
-
-    function account_menu_show() {
-      account_menu.addClass(account_menu_animation_show_class);
-      account_menu.removeClass(account_menu_animation_hide_class);
-      account_menu.removeClass('hidden')
-      account_menu_btn.css('color', '#ff7200');
-
-      if (window.innerWidth <= 1024) {
-        scrollHandler.lock();
-      }
-    }
-    function account_menu_hide() {
-      account_menu.addClass(account_menu_animation_hide_class);
-      account_menu.removeClass(account_menu_animation_show_class);
-      setTimeout(function(){
-        account_menu.addClass('hidden')
-      }, 500);
-      account_menu_btn.css('color', '');
-
-      scrollHandler.unlock();
-    }
-
-    account_menu_btn.on('click', function() {
-      if (account_menu.hasClass(account_menu_hide_class)) {
-        account_menu_show();
-      } else {
-        account_menu_hide();
-      }
-    });
-
-    account_menu_side_btn.on('click', function() {
-      if (account_menu.hasClass(account_menu_hide_class)) {
-        account_menu_show();
-      } else {
-        account_menu_hide();
-      }
-    });
-
-    account_menu_close_btn.on('click', function() {
-      account_menu_hide();
-    });
-
-    $(document).on('click', function (e) {
-      if (!account_menu.hasClass('hidden')) {
-
-        if (account_menu.has(e.target).length === 0 &
-          account_menu.filter(e.target).length === 0 &
-          account_menu_btn.has(e.target).length === 0 &
-          account_menu_btn.filter(e.target).length === 0 &
-          account_menu_side_btn.has(e.target).length === 0 &
-          account_menu_side_btn.filter(e.target).length === 0){
-          account_menu_hide();
-      }
-    }
-  });
-  }
+  modals();
 
   //wishlist nicescroll
   $(".wishlist-box").niceScroll({
@@ -90,81 +26,7 @@ $(window).on('load', function() {
     spacebarenabled: false,
     touchbehavior: true
   });
-  //wishlist menu
-  if ($('#wishlist-modal').length){
-    var wishlist_menu = $("#wishlist-modal"),
-    wishlist_menu_btn = $('.toolbar .toolbar__item .i-like'),
-    wishlist_menu_side_btn = $("#side-menu-wishlist"),
-    wishlist_menu_close_btn = $('.header .wishlist_menu .close'),
-    wishlist_menu_animation_show_class = 'popup-show-animation',
-    wishlist_menu_animation_hide_class = 'popup-hide-animation',
-    wishlist_menu_hide_class = 'hidden',
-    wishlist_menu_counter = $('#wishlist-counter');
-
-
-    function wishlist_menu_show() {
-      wishlist_menu.addClass(wishlist_menu_animation_show_class);
-      wishlist_menu.removeClass(wishlist_menu_animation_hide_class);
-      wishlist_menu.removeClass('hidden')
-      wishlist_menu_btn.css('color', '#ff7200');
-      wishlist_menu_counter.css('color', '#ff7200');
-      setTimeout(function(){
-        if ($('.wishlist-box .product-item').length>1) {
-          $(".wishlist-box").getNiceScroll().resize();
-        }
-      },200);
-
-      if (window.innerWidth <= 1024) {
-        scrollHandler.lock();
-      }
-    }
-    function wishlist_menu_hide() {
-      wishlist_menu.addClass(wishlist_menu_animation_hide_class);
-      wishlist_menu.removeClass(wishlist_menu_animation_show_class);
-      setTimeout(function(){
-        wishlist_menu.addClass('hidden')
-      }, 500);
-      wishlist_menu_btn.css('color', '');
-      wishlist_menu_counter.css('color', '');
-
-      scrollHandler.unlock();
-    }
-
-    wishlist_menu_btn.on('click', function() {
-      if (wishlist_menu.hasClass(wishlist_menu_hide_class)) {
-        wishlist_menu_show();
-      } else {
-        wishlist_menu_hide();
-      }
-    });
-
-    wishlist_menu_side_btn.on('click', function() {
-      if (wishlist_menu.hasClass(wishlist_menu_hide_class)) {
-        wishlist_menu_show();
-      } else {
-        wishlist_menu_hide();
-      }
-    });
-
-    wishlist_menu_close_btn.on('click', function() {
-      wishlist_menu_hide();
-    });
-
-    $(document).on('click', function (e) {
-      if (!wishlist_menu.hasClass('hidden')) {
-
-        if (wishlist_menu.has(e.target).length === 0 &
-          wishlist_menu.filter(e.target).length === 0 &
-          wishlist_menu_btn.has(e.target).length === 0 &
-          wishlist_menu_btn.filter(e.target).length === 0 &
-          wishlist_menu_side_btn.has(e.target).length === 0 &
-          wishlist_menu_side_btn.filter(e.target).length === 0){
-          wishlist_menu_hide();
-      }
-    }
-  });
-  }
-
+  
   //cart nicescroll
   $(".cart-box").niceScroll({
     cursorcolor:"#ff8e32",
@@ -175,79 +37,6 @@ $(window).on('load', function() {
     spacebarenabled: false,
     touchbehavior: true
   }); 
-  //cart menu
-  if ($('#cart-modal').length){
-    var cart_menu = $("#cart-modal"),
-    cart_menu_btn = $('.toolbar .toolbar__item .i-bag'),
-    cart_menu_side_btn = $(".header .side_menu .my_cart"),
-    cart_menu_close_btn = $('.header .cart_menu .close'),
-    cart_menu_animation_show_class = 'popup-show-animation',
-    cart_menu_animation_hide_class = 'popup-hide-animation',
-    cart_menu_hide_class = 'hidden',
-    cart_menu_counter = $('#cart-counter');
-
-
-    function cart_menu_show() {
-      cart_menu.addClass(cart_menu_animation_show_class);
-      cart_menu.removeClass(cart_menu_animation_hide_class);
-      cart_menu.removeClass('hidden')
-      cart_menu_btn.css('color', '#ff7200');
-      cart_menu_counter.css('color', '#ff7200');
-      setTimeout(function(){
-        if ($('.cart-box .product-item-alt').length > 2) {
-          $(".cart-box").getNiceScroll().resize();
-        }
-      },200);
-
-      if (window.innerWidth <= 1024) {
-        scrollHandler.lock();
-      }
-    }
-    function cart_menu_hide() {
-      cart_menu.addClass(cart_menu_animation_hide_class);
-      cart_menu.removeClass(cart_menu_animation_show_class);
-      setTimeout(function(){
-        cart_menu.addClass('hidden')
-      }, 500);
-      cart_menu_btn.css('color', '');
-      cart_menu_counter.css('color', '');
-
-      scrollHandler.unlock();
-    }
-
-    cart_menu_btn.on('click', function() {
-      if (cart_menu.hasClass(cart_menu_hide_class)) {
-        cart_menu_show();
-      } else {
-        cart_menu_hide();
-      }
-    });
-
-    cart_menu_side_btn.on('click', function() {
-      if (cart_menu.hasClass(cart_menu_hide_class)) {
-        cart_menu_show();
-      } else {
-        cart_menu_hide();
-      }
-    });
-
-    cart_menu_close_btn.on('click', function() {
-      cart_menu_hide();
-    });
-
-    $(document).on('click', function (e) {
-      if (!cart_menu.hasClass('hidden')) {
-        if (cart_menu.has(e.target).length === 0 &
-          cart_menu.filter(e.target).length === 0 &
-          cart_menu_btn.has(e.target).length === 0 &
-          cart_menu_btn.filter(e.target).length === 0 &
-          cart_menu_side_btn.has(e.target).length === 0 &
-          cart_menu_side_btn.filter(e.target).length === 0){
-          cart_menu_hide();
-      }
-    }
-  });
-  }
 
   //main products slider
   if ($('.products-slider--main-page').length) {
