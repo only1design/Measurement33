@@ -4,28 +4,15 @@ import getHeaderHeight from "./modules/getHeaderHeight.js";
 import getFooterHeight from "./modules/getFooterHeight.js";
 import errorWindow from "./modules/errorWindow.js";
 import headerPlaceholder from "./modules/headerPlaceholder.js";
+import footerPlaceholder from "./modules/footerPlaceholder.js";
 
 $(window).on('load', function() {
   "use strict";
 
   pagePreloader();
   errorWindow();
-
-  //header placeholder
   headerPlaceholder();
-  
-
-  //footer placeholder
-  if ($('.footer-placeholder').length) {
-    function footer_placeholder() {
-      $('.footer-placeholder').css('height', getFooterHeight );
-    }
-
-    footer_placeholder();
-    $(window).on('resize', function() {
-      footer_placeholder();
-    });
-  }
+  footerPlaceholder();
 
   //account menu
   if ($('#account-modal').length){
