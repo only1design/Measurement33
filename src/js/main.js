@@ -2,18 +2,13 @@ import scrollHandler from "./modules/scrollHandler.js";
 import pagePreloader from "./modules/pagePreloader.js";
 import getHeaderHeight from "./modules/getHeaderHeight.js";
 import getFooterHeight from "./modules/getFooterHeight.js";
+import errorWindow from "./modules/errorWindow.js";
 
 $(window).on('load', function() {
   "use strict";
 
   pagePreloader();
-
-  //errors close
-  if ($('.errors .errors__close').length) {
-    $('.errors .errors__close').on('click', function() {
-      $('.errors').slideUp(200);
-    })
-  }
+  errorWindow();
 
   //header placeholder
   if($('.header-placeholder').length) {  
