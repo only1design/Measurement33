@@ -1,22 +1,13 @@
 import scrollHandler from "./modules/scrollHandler.js";
+import pagePreloader from "./modules/pagePreloader.js";
+import getHeaderHeight from "./modules/getHeaderHeight.js";
 
 $(window).on('load', function() {
   "use strict";
 
-  //page loading
-  if ($('.page-loading').length) {
-    let page_loading = $('.page-loading');
-    page_loading.animate({opacity: 0},400, function(){
-      page_loading.css({display: 'none', opacity: 1});
-    });
-    scrollHandler.unlock();
-  }
+  pagePreloader();
 
   //global functions
-  let header_height = $('header.header .header__bar').css('height');
-  $(window).on('resize', function() {
-    header_height = $('header.header .header__bar').css('height');
-  });
 
   let footer_height = $('.footer').css('height');
   $(window).on('resize', function() {
@@ -33,7 +24,7 @@ $(window).on('load', function() {
   //header placeholder
   if($('.header-placeholder').length) {  
     function header_placeholder() {
-      $('.header-placeholder').css('height', header_height );
+      $('.header-placeholder').css('height', getHeaderHeight() );
     }
 
     header_placeholder();
@@ -450,13 +441,13 @@ $(window).on('load', function() {
 
     function side_menu_height() {
       window_height = window.innerHeight,
-      side_menu_h = (window_height - parseInt(header_height));
+      side_menu_h = (window_height - parseInt(getHeaderHeight()));
 
       side_menu.css('height', side_menu_h + 'px');
     }
 
     let window_height = window.innerHeight,
-    side_menu_h = (window_height - parseInt(header_height));
+    side_menu_h = (window_height - parseInt(getHeaderHeight()));
 
     side_menu.css('height', side_menu_h + 'px');
 
@@ -475,8 +466,8 @@ $(window).on('load', function() {
     filter_cat_container = $('.catalog-filter__categories-container');
 
     function filter_height() {
-      let filter_h = window.innerHeight - parseInt(header_height) + 'px';
-      let filter_cat_h = window.innerHeight - parseInt(header_height) - 74 + 'px';
+      let filter_h = window.innerHeight - parseInt(getHeaderHeight()) + 'px';
+      let filter_cat_h = window.innerHeight - parseInt(getHeaderHeight()) - 74 + 'px';
       filter.css('height', filter_h);
       filter_cat_container.css('height', filter_cat_h);
     }
@@ -485,7 +476,7 @@ $(window).on('load', function() {
       filter.removeClass(filter_closed);
 
       if(window.innerWidth <= 1024) {
-        filter.css({'top': header_height});
+        filter.css({'top': getHeaderHeight()});
         scrollHandler.lock();
       }
     }
@@ -606,9 +597,9 @@ $(window).on('load', function() {
       scrollHandler.unlock();
     }
     function si_ch_height() {
-      let si_ch_h = window.innerHeight - parseInt(header_height) + 'px';
+      let si_ch_h = window.innerHeight - parseInt(getHeaderHeight()) + 'px';
       si_ch_window.css('height', si_ch_h);
-      si_ch_window.css('top', header_height);
+      si_ch_window.css('top', getHeaderHeight());
     }
 
     si_ch_height();
