@@ -1,3 +1,5 @@
+import scrollHandler from "./modules/scrollHandler.js";
+
 $(window).on('load', function() {
   "use strict";
 
@@ -7,7 +9,7 @@ $(window).on('load', function() {
     page_loading.animate({opacity: 0},400, function(){
       page_loading.css({display: 'none', opacity: 1});
     });
-    scroll_unlock();
+    scrollHandler.unlock();
   }
 
   //global functions
@@ -20,20 +22,6 @@ $(window).on('load', function() {
   $(window).on('resize', function() {
     footer_height = $('.footer').css('height');
   });
-
-  function scroll_lock() {
-    if($('html').css('overflow', '')) {
-      $('html').css('overflow', 'hidden');
-      setTimeout(function() {
-        $('html').css('overflow', 'hidden');
-      },1);
-    }
-  }
-  function scroll_unlock() {
-    if ( $('html').css('overflow', 'hidden')) {
-      $('html').css('overflow', 'unset');
-    }
-  }
 
   //errors close
   if ($('.errors .errors__close').length) {
@@ -83,7 +71,7 @@ $(window).on('load', function() {
       account_menu_btn.css('color', '#ff7200');
 
       if (window.innerWidth <= 1024) {
-        scroll_lock();
+        scrollHandler.lock();
       }
     }
     function account_menu_hide() {
@@ -94,7 +82,7 @@ $(window).on('load', function() {
       }, 500);
       account_menu_btn.css('color', '');
 
-      scroll_unlock();
+      scrollHandler.unlock();
     }
 
     account_menu_btn.on('click', function() {
@@ -167,7 +155,7 @@ $(window).on('load', function() {
       },200);
 
       if (window.innerWidth <= 1024) {
-        scroll_lock();
+        scrollHandler.lock();
       }
     }
     function wishlist_menu_hide() {
@@ -179,7 +167,7 @@ $(window).on('load', function() {
       wishlist_menu_btn.css('color', '');
       wishlist_menu_counter.css('color', '');
 
-      scroll_unlock();
+      scrollHandler.unlock();
     }
 
     wishlist_menu_btn.on('click', function() {
@@ -252,7 +240,7 @@ $(window).on('load', function() {
       },200);
 
       if (window.innerWidth <= 1024) {
-        scroll_lock();
+        scrollHandler.lock();
       }
     }
     function cart_menu_hide() {
@@ -264,7 +252,7 @@ $(window).on('load', function() {
       cart_menu_btn.css('color', '');
       cart_menu_counter.css('color', '');
 
-      scroll_unlock();
+      scrollHandler.unlock();
     }
 
     cart_menu_btn.on('click', function() {
@@ -357,11 +345,11 @@ $(window).on('load', function() {
 
     function subscribe_window_show() {
       subscribe_window.removeClass('hidden');
-      scroll_lock();
+      scrollHandler.lock();
     }
     function subscribe_window_hide() {
       subscribe_window.addClass('hidden');
-      scroll_unlock();
+      scrollHandler.unlock();
     }
 
     $('.side-menu__subscribe').on('click', function() {
@@ -403,11 +391,11 @@ $(window).on('load', function() {
       },200);
 
       if (window.innerWidth <= 1024) {
-        scroll_lock();
+        scrollHandler.lock();
       }
     };
     function side_menu_hide() {
-      scroll_unlock();
+      scrollHandler.unlock();
 
       side_menu.addClass(side_menu_hidden);
       side_menu.removeClass(side_menu_showed);
@@ -415,7 +403,7 @@ $(window).on('load', function() {
       
       side_menu_burger.css('color','');
 
-      scroll_unlock();
+      scrollHandler.unlock();
     };
 
 
@@ -498,13 +486,13 @@ $(window).on('load', function() {
 
       if(window.innerWidth <= 1024) {
         filter.css({'top': header_height});
-        scroll_lock();
+        scrollHandler.lock();
       }
     }
     function filter_close() {
       filter.addClass(filter_closed);
       filter.removeClass(filter_opened);
-      scroll_unlock();
+      scrollHandler.unlock();
     }
 
     filter_btn.on('click', function(){
@@ -609,13 +597,13 @@ $(window).on('load', function() {
     function si_ch_show() {
       si_ch_window.removeClass('hidden');
       si_ch_window.animate({'opacity': '1'}, 200);
-      scroll_lock();
+      scrollHandler.lock();
     }
     function si_ch_hide() {
       si_ch_window.animate({'opacity': '0'}, 200, function(){
         si_ch_window.addClass('hidden');  
       });
-      scroll_unlock();
+      scrollHandler.unlock();
     }
     function si_ch_height() {
       let si_ch_h = window.innerHeight - parseInt(header_height) + 'px';
