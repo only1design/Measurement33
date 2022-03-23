@@ -3,6 +3,7 @@ import pagePreloader from "./modules/pagePreloader.js";
 import getHeaderHeight from "./modules/getHeaderHeight.js";
 import getFooterHeight from "./modules/getFooterHeight.js";
 import errorWindow from "./modules/errorWindow.js";
+import headerPlaceholder from "./modules/headerPlaceholder.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -11,16 +12,8 @@ $(window).on('load', function() {
   errorWindow();
 
   //header placeholder
-  if($('.header-placeholder').length) {  
-    function header_placeholder() {
-      $('.header-placeholder').css('height', getHeaderHeight() );
-    }
-
-    header_placeholder();
-    $(window).on('resize', function() {
-      header_placeholder();
-    });
-  }
+  headerPlaceholder();
+  
 
   //footer placeholder
   if ($('.footer-placeholder').length) {
