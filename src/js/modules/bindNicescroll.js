@@ -1,5 +1,5 @@
 function bindNicescroll() {
-  //wishlist nicescroll
+  // Wishlist nicescroll
   $(".wishlist-box").niceScroll({
     cursorcolor:"#ff8e32",
     cursorwidth:"6px",
@@ -10,7 +10,7 @@ function bindNicescroll() {
     touchbehavior: true
   });
   
-  //cart nicescroll
+  // Cart nicescroll
   $(".cart-box").niceScroll({
     cursorcolor:"#ff8e32",
     cursorwidth:"6px",
