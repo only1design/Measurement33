@@ -20,37 +20,6 @@ $(window).on('load', function() {
   bindNicescroll();
   bindSlider();
   
-  //subscribe window
-  if ($('.subscribe-window').length) {
-    let subscribe_window = $('.subscribe-window');
-
-    function subscribe_window_show() {
-      subscribe_window.removeClass('hidden');
-      scrollHandler.lock();
-    }
-    function subscribe_window_hide() {
-      subscribe_window.addClass('hidden');
-      scrollHandler.unlock();
-    }
-
-    $('.side-menu__subscribe').on('click', function() {
-      subscribe_window_show();
-    })
-
-    $(document).on('click', function (e) {
-      if (!subscribe_window.hasClass('hidden')) {
-
-        if ($('.subscribe-window__screen').filter(e.target).length === 0 &
-          $('.subscribe-window__screen').has(e.target).length === 0 &
-          $('.side-menu__subscribe').filter(e.target).length === 0 &
-          $('.side-menu__subscribe').has(e.target).length === 0) {
-          subscribe_window_hide();
-      }
-
-    }
-  });
-  }
-
   //side menu
   if ($('.side-menu').length) {
 

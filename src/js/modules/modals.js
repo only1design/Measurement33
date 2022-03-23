@@ -86,6 +86,7 @@ function modals() {
   bindModal('#account-modal', '.toolbar .toolbar__item--account', '#side-menu-account');
   bindModal('#wishlist-modal', '.toolbar__item--wishlist', '#side-menu-wishlist', '.wishlist-box', '.wishlist-box .product-item', 1);
   bindModal('#cart-modal', '.toolbar .toolbar__item--cart', false, '.cart-box', '.cart-box .product-item-alt', 2);
+  bindModal('.subscribe-window', '.side-menu__subscribe', false, false, false, false, '', '', 'hidden', '')
 }
 
 export default modals;
