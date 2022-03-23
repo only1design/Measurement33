@@ -6,6 +6,7 @@ import errorWindow from "./modules/errorWindow.js";
 import headerPlaceholder from "./modules/headerPlaceholder.js";
 import footerPlaceholder from "./modules/footerPlaceholder.js";
 import modals from "./modules/modals.js";
+import bindNicescroll from "./modules/bindNicescroll.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -15,29 +16,8 @@ $(window).on('load', function() {
   headerPlaceholder();
   footerPlaceholder();
   modals();
-
-  //wishlist nicescroll
-  $(".wishlist-box").niceScroll({
-    cursorcolor:"#ff8e32",
-    cursorwidth:"6px",
-    autohidemode:'leave',
-    cursoropacitymin: 0.3,
-    horizrailenabled: false,
-    spacebarenabled: false,
-    touchbehavior: true
-  });
+  bindNicescroll();
   
-  //cart nicescroll
-  $(".cart-box").niceScroll({
-    cursorcolor:"#ff8e32",
-    cursorwidth:"6px",
-    autohidemode:'leave',
-    cursoropacitymin: 0.3,
-    horizrailenabled: false,
-    spacebarenabled: false,
-    touchbehavior: true
-  }); 
-
   //main products slider
   if ($('.products-slider--main-page').length) {
     let prev_arrow = document.querySelector(".products-slider--main-page .products-slider__arrow-left"),
