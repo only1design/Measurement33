@@ -1,15 +1,18 @@
 import scrollHandler from "./scrollHandler.js";
 
 function modals() {
-  const bindModal = (modalSelector, btnSelector, sideBtnSelector = false, boxSelector = false, boxItemsSelector = false, boxItemsForResize = 0, showAnimationClass = 'popup-show-animation', hideAnimationClass = 'popup-hide-animation', modalHideClass = 'hidden', color = '#ff7200') => {
+  const bindModal = (modalSelector, btnSelector, sideBtnSelector = false, boxSelector = false, boxItemsSelector = false, boxItemsForResize = 0, showAnimationClass = 'popup-show-animation', hideAnimationClass = 'popup-hide-animation', modalHideClass = 'hidden', color = '#ff7200', modalScreenClass = false) => {
     if ($(modalSelector).length){
       const modal = $(modalSelector),
         btn = $(btnSelector);
       const sideBtn = $(sideBtnSelector).length ? $(sideBtnSelector) : false;
+      const screen = $(modalScreenClass).length ? $(modalScreenClass) : false;
 
       const modalShow = () => {
-        modal.addClass(showAnimationClass);
-        modal.removeClass(hideAnimationClass);
+        if (showAnimationClass) {
+          modal.addClass(showAnimationClass);
+          modal.removeClass(hideAnimationClass);
+        }
         modal.removeClass(modalHideClass);
 
         btn.css('color', color);
@@ -28,11 +31,16 @@ function modals() {
       }
 
       const modalHide = () => {
-        modal.addClass(hideAnimationClass);
-        modal.removeClass(showAnimationClass);
-        setTimeout(function(){
+        if (hideAnimationClass) {
+          modal.addClass(hideAnimationClass);
+          modal.removeClass(showAnimationClass);
+
+          setTimeout(function(){
+            modal.addClass(modalHideClass)
+          }, 500);
+        } else {
           modal.addClass(modalHideClass)
-        }, 500);
+        }
 
         btn.css('color', '');
         scrollHandler.unlock();
@@ -69,7 +77,14 @@ function modals() {
               modalHide();
             }
           } else {
-            if (modal.has(e.target).length === 0 &
+            if (screen) {
+              if (screen.has(e.target).length === 0 &
+              screen.filter(e.target).length === 0 &
+              btn.has(e.target).length === 0 &
+              btn.filter(e.target).length === 0){
+                modalHide();
+              }
+            } else if (modal.has(e.target).length === 0 &
             modal.filter(e.target).length === 0 &
             btn.has(e.target).length === 0 &
             btn.filter(e.target).length === 0){
@@ -86,7 +101,7 @@ function modals() {
   bindModal('#account-modal', '.toolbar .toolbar__item--account', '#side-menu-account');
   bindModal('#wishlist-modal', '.toolbar__item--wishlist', '#side-menu-wishlist', '.wishlist-box', '.wishlist-box .product-item', 1);
   bindModal('#cart-modal', '.toolbar .toolbar__item--cart', false, '.cart-box', '.cart-box .product-item-alt', 2);
-  bindModal('.subscribe-window', '.side-menu__subscribe', false, false, false, false, '', '', 'hidden', '')
+  bindModal('.subscribe-window', '.side-menu__subscribe', false, false, false, false, '', '', 'hidden', '', '.subscribe-window__screen')
 }
 
 export default modals;
