@@ -1,18 +1,12 @@
 import scrollHandler from "./modules/scrollHandler.js";
 import pagePreloader from "./modules/pagePreloader.js";
 import getHeaderHeight from "./modules/getHeaderHeight.js";
+import getFooterHeight from "./modules/getFooterHeight.js";
 
 $(window).on('load', function() {
   "use strict";
 
   pagePreloader();
-
-  //global functions
-
-  let footer_height = $('.footer').css('height');
-  $(window).on('resize', function() {
-    footer_height = $('.footer').css('height');
-  });
 
   //errors close
   if ($('.errors .errors__close').length) {
@@ -36,7 +30,7 @@ $(window).on('load', function() {
   //footer placeholder
   if ($('.footer-placeholder').length) {
     function footer_placeholder() {
-      $('.footer-placeholder').css('height', footer_height );
+      $('.footer-placeholder').css('height', getFooterHeight );
     }
 
     footer_placeholder();
