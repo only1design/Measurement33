@@ -10,6 +10,7 @@ import bindNicescroll from "./modules/bindNicescroll.js";
 import bindSlider from "./modules/bindSlider.js";
 import sideMenu from "./modules/sideMenu.js";
 import catalogFilter from "./modules/catalogFilter.js";
+import formValidators from "./modules/formValidators.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -23,32 +24,7 @@ $(window).on('load', function() {
   bindSlider();
   sideMenu();
   catalogFilter();
-
-  //simple product form validation
-  if ($(".sp-options form").length) {
-    let add_to_cart_btn = $('.sp-options__add-btn'),
-    checkout_btn = $('.sp-options__checkout-btn');
-
-    $(".sp-options form").validate({
-      submitHandler: function() {
-        add_to_cart_btn.animate({
-          'opacity': '0'},
-          200, function() {
-            add_to_cart_btn.addClass('hidden');
-            checkout_btn.removeClass('hidden').css('opacity','0').animate({'opacity':'1'}, 200);
-            if ($('.sp-options__invalid').length) {
-              $('.sp-options__invalid').remove();
-            }
-          });
-      },
-      invalidHandler: function() {
-        if (!$('.sp-options__invalid').length) {
-          $('.sp-options__bottom-btn-box').before('<span class="sp-options__invalid">Select color and size</span>');
-        }
-      },
-      showErrors: function(){}
-    });
-  }
+  formValidators();
 
   //simple product size chart modal window
   if ($('.sp-options__size-chart').length) {
@@ -122,38 +98,9 @@ $(window).on('load', function() {
       }
     });
   }
-  //checkout step 1 validate
-  if ($("#checkout-step-1").length) {
-    $("#checkout-step-1").validate({
-      highlight: function(element, errorClass) {
-        $(element).addClass('checkout-main-box__field-input--invalid');
+  
 
-        $(element).on('click', function() {
-          $(element).removeClass('checkout-main-box__field-input--invalid');
-        });
-      },
-      errorPlacement: function() {
-        return false;
-      }
-    });
-  }
-
-  //checkout step 2 validate
-  if ($("#checkout-step-2").length) {
-    $("#checkout-step-2").validate({
-      highlight: function(element, errorClass) {
-        $(element).addClass('checkout-main-box__field-input--invalid');
-
-        $(element).on('click', function() {
-          $(element).removeClass('checkout-main-box__field-input--invalid');
-        });
-      },
-      errorPlacement: function() {
-        return false;
-      }
-    });
-  }
-
+  
   //settings sections
   if ($('.settings__section').length) {
     function set_section_open(s_id) {
