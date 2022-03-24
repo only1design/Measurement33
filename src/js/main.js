@@ -12,6 +12,7 @@ import sideMenu from "./modules/sideMenu.js";
 import catalogFilter from "./modules/catalogFilter.js";
 import formValidators from "./modules/formValidators.js";
 import modalSizeChart from "./modules/modalSizeChart.js";
+import simpleProductTabs from "./modules/simpleProductTabs.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -21,46 +22,14 @@ $(window).on('load', function() {
   headerPlaceholder();
   footerPlaceholder();
   modals();
+  modalSizeChart();
   bindNicescroll();
   bindSlider();
   sideMenu();
   catalogFilter();
   formValidators();
-  modalSizeChart();
+  simpleProductTabs();
 
-  //simple product description
-  if($('.sp-desc').length) {
-    let desc_about_btn = $('.sp-desc__item--about'),
-    desc_return_btn = $('.sp-desc__item--return'),
-    desc_about_content = $('.sp-desc__desc--about'),
-    desc_return_content = $('.sp-desc__desc--return'),
-    desc_btn_active = 'sp-desc__item--active',
-    desc_btn = $('.sp-desc__item'),
-    desc_content = $('.sp-desc__desc');
-
-    desc_about_btn.on('click', function(){
-      if (!desc_about_btn.hasClass(desc_btn_active)) {
-        desc_btn.removeClass(desc_btn_active);
-        desc_about_btn.addClass(desc_btn_active);
-
-        desc_content.addClass('hidden');
-        desc_about_content.removeClass('hidden');
-      }
-    });
-
-    desc_return_btn.on('click', function(){
-      if (!desc_return_btn.hasClass(desc_btn_active)) {
-        desc_btn.removeClass(desc_btn_active);
-        desc_return_btn.addClass(desc_btn_active);
-
-        desc_content.addClass('hidden');
-        desc_return_content.removeClass('hidden');
-      }
-    });
-  }
-  
-
-  
   //settings sections
   if ($('.settings__section').length) {
     function set_section_open(s_id) {
