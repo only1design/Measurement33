@@ -1,6 +1,7 @@
 # Measurement33 FrontEnd
 
-[Design](https://www.figma.com/file/C30gO6bxKhV8ne6qkNh8lG/Measurement33?node-id=0%3A1)
+[Design](https://www.figma.com/file/C30gO6bxKhV8ne6qkNh8lG/Measurement33?node-id=0%3A1) <br>
+[Source Files](https://github.com/TBoendergaard/Measurement33/tree/gh-pages/src)
 ---
 
 ## **Sitemap**
@@ -14,3 +15,20 @@
 [404](https://tboendergaard.github.io/Measurement33/dist/404.html) <br>
 [Delivery](https://tboendergaard.github.io/Measurement33/dist/delivery.html) <br>
 [Password Recovery](https://tboendergaard.github.io/Measurement33/dist/recovery.html) <br>
+---
+
+## **Used in the FrontEnd development:**
+- ES6 features <br>
+- CDN Libraries <br>
+- Gulp <br>
+- NPM <br>
+- GIT <br>
+- jQuery and jQ Plugins <br>
+- HTML5 semantic tags
+- BEM methodology <br>
+- Responsive Web Design <br>
+- LESS preprocessor <br>
+- CSS visual effects, flexbox, positioning <br>
+- Figma <br>
+
+Later this layout was used to create a WordPress template for online-shop for UAE market.
