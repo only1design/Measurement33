@@ -3,8 +3,8 @@ function bindSlider() {
   // Main page products slider
   function bindMainPageSlider() {
     if ($('.products-slider--main-page').length) {
-      const prevArrow = document.querySelector(".products-slider--main-page .products-slider__arrow-left"),
-        nextArrow = document.querySelector(".products-slider--main-page .products-slider__arrow-right");
+      const prevArrow = document.querySelector('.products-slider--main-page .products-slider__arrow-left'),
+        nextArrow = document.querySelector('.products-slider--main-page .products-slider__arrow-right');
       prevArrow.remove();
       nextArrow.remove();
   
@@ -32,7 +32,7 @@ function bindSlider() {
       const deleteSlides = (deleteCount) => {
         if (!deleteSlidesStatus) {
           function getLastSlide(){
-            return ($(".products-slider--main-page").slick("getSlick").slideCount - 1);
+            return ($('.products-slider--main-page').slick('getSlick').slideCount - 1);
           }
           for (let i = 0; i < deleteCount; i++) { 
             $('.products-slider--main-page').slick('slickRemove', getLastSlide());
@@ -57,8 +57,8 @@ function bindSlider() {
   // Simple page slider
   function bindSimplePageSlider() {
     if ($('.sp-slider').length) {
-      const prevArrow = document.querySelector(".sp-slider__arrow-btn--left"),
-        nextArrow = document.querySelector(".sp-slider__arrow-btn--right");
+      const prevArrow = document.querySelector('.sp-slider__arrow-btn--left'),
+        nextArrow = document.querySelector('.sp-slider__arrow-btn--right');
       prevArrow.remove();
       nextArrow.remove();
   

@@ -2,10 +2,10 @@ function simpleProductTabs() {
   if($('.sp-desc').length) {
     const btnTab1 = $('.sp-desc__item--about'),
       btnTab2 = $('.sp-desc__item--return'),
-      contentTab1 = $('.sp-desc__desc--about'),
-      contentTab2 = $('.sp-desc__desc--return'),
       btnActiveClass = 'sp-desc__item--active',
       btnItems = $('.sp-desc__item'),
+      contentTab1 = $('.sp-desc__desc--about'),
+      contentTab2 = $('.sp-desc__desc--return'),
       contentItems = $('.sp-desc__desc');
 
     function bindTab(btn, content) {

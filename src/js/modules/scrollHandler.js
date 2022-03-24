@@ -2,7 +2,7 @@ const scrollHandler = {
   lock() {
     if($('html').css('overflow', '')) {
       $('html').css('overflow', 'hidden');
-      setTimeout(function() { //FIXME remove double hidding
+      setTimeout(function() {
         $('html').css('overflow', 'hidden');
       },1);
     }

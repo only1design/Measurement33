@@ -1,5 +1,5 @@
-import scrollHandler from "./scrollHandler.js";
-import getHeaderHeight from "./getHeaderHeight.js";
+import scrollHandler from './scrollHandler.js';
+import getHeaderHeight from './getHeaderHeight.js';
 
 function sideMenu () {
   if ($('.side-menu').length) {
@@ -43,8 +43,8 @@ function sideMenu () {
     };
   
     sideMenuContentBox.niceScroll({
-      cursorcolor:"#ff8e32",
-      cursorwidth:"6px",
+      cursorcolor:'#ff8e32',
+      cursorwidth:'6px',
       autohidemode:'leave',
       cursoropacitymin: 0.3,
       horizrailenabled: false,

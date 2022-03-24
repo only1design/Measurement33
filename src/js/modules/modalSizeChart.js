@@ -1,5 +1,5 @@
-import scrollHandler from "./scrollHandler.js";
-import getHeaderHeight from "./getHeaderHeight.js";
+import scrollHandler from './scrollHandler.js';
+import getHeaderHeight from './getHeaderHeight.js';
 
 function modalSizeChart() {
   if ($('.sp-options__size-chart').length) {
@@ -8,13 +8,13 @@ function modalSizeChart() {
       btn = $('.sp-options__info--size-chart'),
       hideClass = 'hidden';
 
-    function modalShow() {
+    function showModal() {
       modal.removeClass(hideClass);
       modal.animate({'opacity': '1'}, 200);
       scrollHandler.lock();
     }
 
-    function modalHide() {
+    function hideModal() {
       modal.animate({'opacity': '0'},
       200, function(){
         modal.addClass(hideClass);  
@@ -36,13 +36,13 @@ function modalSizeChart() {
 
     btn.on('click', function(){
       if(modal.hasClass(hideClass)) {
-        modalShow();
+        showModal();
       }
     });
     
     closeBtn.on('click', function(){
       if(!modal.hasClass(hideClass)) {
-        modalHide();
+        hideModal();
       }
     });
   }

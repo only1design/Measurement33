@@ -1,13 +1,13 @@
-import getHeaderHeight from "./getHeaderHeight.js";
-import scrollHandler from "./scrollHandler.js";
+import getHeaderHeight from './getHeaderHeight.js';
+import scrollHandler from './scrollHandler.js';
 
 function catalogFilter() {
   if ($('.catalog-filter').length) {
     const filter = $('.catalog-filter'),
       filterOpenClass = 'catalog-filter--opened',
       filterCloseClass = 'catalog-filter--closed',
-      filterBtn = $('.catalog-filter-btn__btn'),
-      filterCloseBtn = $('.catalog-filter__close-btn'),
+      btn = $('.catalog-filter-btn__btn'),
+      closeBtn = $('.catalog-filter__close-btn'),
       filterContainer = $('.catalog-filter__categories-container');
 
     function filterSetHeight() {
@@ -18,7 +18,7 @@ function catalogFilter() {
       filterContainer.css('height', filterContainerHeight);
     }
 
-    function filterShow() {
+    function showFilter() {
       filter.addClass(filterOpenClass);
       filter.removeClass(filterCloseClass);
 
@@ -28,23 +28,23 @@ function catalogFilter() {
       }
     }
 
-    function filterHide() {
+    function hideFilter() {
       filter.addClass(filterCloseClass);
       filter.removeClass(filterOpenClass);
       
       scrollHandler.unlock();
     }
 
-    filterBtn.on('click', function(){
+    btn.on('click', function(){
       if (filter.hasClass(filterCloseClass)) {
-        filterShow();
+        showFilter();
       } else {
-        filterHide();
+        hideFilter();
       }
     })
 
-    filterCloseBtn.on('click', function() {
-      filterHide();
+    closeBtn.on('click', function() {
+      hideFilter();
     })
 
     $(window).on('resize', function() {

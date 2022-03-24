@@ -1,4 +1,5 @@
 function formValidators() {
+  
   // Simple product form
   function simpleProductFormValidation() {
     if ($('.sp-options form').length) {

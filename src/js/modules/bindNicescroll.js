@@ -1,8 +1,9 @@
 function bindNicescroll() {
+  
   // Wishlist nicescroll
-  $(".wishlist-box").niceScroll({
-    cursorcolor:"#ff8e32",
-    cursorwidth:"6px",
+  $('.wishlist-box').niceScroll({
+    cursorcolor:'#ff8e32',
+    cursorwidth:'6px',
     autohidemode:'leave',
     cursoropacitymin: 0.3,
     horizrailenabled: false,
@@ -11,9 +12,9 @@ function bindNicescroll() {
   });
   
   // Cart nicescroll
-  $(".cart-box").niceScroll({
-    cursorcolor:"#ff8e32",
-    cursorwidth:"6px",
+  $('.cart-box').niceScroll({
+    cursorcolor:'#ff8e32',
+    cursorwidth:'6px',
     autohidemode:'leave',
     cursoropacitymin: 0.3,
     horizrailenabled: false,
