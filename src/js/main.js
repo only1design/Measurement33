@@ -1,7 +1,7 @@
 import scrollHandler from "./modules/scrollHandler.js";
 import pagePreloader from "./modules/pagePreloader.js";
 import getHeaderHeight from "./modules/getHeaderHeight.js";
-import getFooterHeight from "./modules/getFooterHeight.js";
+import getFooterHeight from "./modules/getFooterHeight.js"; //TODO clear modules
 import errorWindow from "./modules/errorWindow.js";
 import headerPlaceholder from "./modules/headerPlaceholder.js";
 import footerPlaceholder from "./modules/footerPlaceholder.js";
@@ -9,6 +9,7 @@ import modals from "./modules/modals.js";
 import bindNicescroll from "./modules/bindNicescroll.js";
 import bindSlider from "./modules/bindSlider.js";
 import sideMenu from "./modules/sideMenu.js";
+import catalogFilter from "./modules/catalogFilter.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -21,61 +22,7 @@ $(window).on('load', function() {
   bindNicescroll();
   bindSlider();
   sideMenu();
-  
-
-  //catalog filter
-  if ($('.catalog-filter').length) {
-    let filter = $('.catalog-filter'),
-    filter_opened = 'catalog-filter--opened',
-    filter_closed = 'catalog-filter--closed',
-    filter_btn = $('.catalog-filter-btn__btn'),
-    filter_close_btn = $('.catalog-filter__close-btn'),
-    filter_cat_container = $('.catalog-filter__categories-container');
-
-    function filter_height() {
-      let filter_h = window.innerHeight - parseInt(getHeaderHeight()) + 'px';
-      let filter_cat_h = window.innerHeight - parseInt(getHeaderHeight()) - 74 + 'px';
-      filter.css('height', filter_h);
-      filter_cat_container.css('height', filter_cat_h);
-    }
-    function filter_show() {
-      filter.addClass(filter_opened);
-      filter.removeClass(filter_closed);
-
-      if(window.innerWidth <= 1024) {
-        filter.css({'top': getHeaderHeight()});
-        scrollHandler.lock();
-      }
-    }
-    function filter_close() {
-      filter.addClass(filter_closed);
-      filter.removeClass(filter_opened);
-      scrollHandler.unlock();
-    }
-
-    filter_btn.on('click', function(){
-      if (filter.hasClass(filter_closed)) {
-        filter_show();
-      } else {
-        filter_close();
-      }
-    })
-
-    filter_close_btn.on('click', function() {
-      filter_close();
-    })
-
-    $(window).on('resize', function() {
-      if (window.innerWidth <= 1024) {
-        filter_height();
-      }
-    })
-    if (window.innerWidth <= 1024) {
-      filter_height();
-    }
-  }
-
-  
+  catalogFilter();
 
   //simple product form validation
   if ($(".sp-options form").length) {
@@ -236,6 +183,3 @@ $(window).on('load', function() {
   }
 
 });
-
-
-
