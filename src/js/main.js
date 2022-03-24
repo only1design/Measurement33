@@ -11,6 +11,7 @@ import bindSlider from "./modules/bindSlider.js";
 import sideMenu from "./modules/sideMenu.js";
 import catalogFilter from "./modules/catalogFilter.js";
 import formValidators from "./modules/formValidators.js";
+import modalSizeChart from "./modules/modalSizeChart.js";
 
 $(window).on('load', function() {
   "use strict";
@@ -25,48 +26,7 @@ $(window).on('load', function() {
   sideMenu();
   catalogFilter();
   formValidators();
-
-  //simple product size chart modal window
-  if ($('.sp-options__size-chart').length) {
-    let si_ch_window = $('.sp-options__size-chart'),
-    si_ch_close_btn = $('.sp-options__size-chart-close'),
-    si_ch_btn = $('.sp-options__info--size-chart');
-
-    function si_ch_show() {
-      si_ch_window.removeClass('hidden');
-      si_ch_window.animate({'opacity': '1'}, 200);
-      scrollHandler.lock();
-    }
-    function si_ch_hide() {
-      si_ch_window.animate({'opacity': '0'}, 200, function(){
-        si_ch_window.addClass('hidden');  
-      });
-      scrollHandler.unlock();
-    }
-    function si_ch_height() {
-      let si_ch_h = window.innerHeight - parseInt(getHeaderHeight()) + 'px';
-      si_ch_window.css('height', si_ch_h);
-      si_ch_window.css('top', getHeaderHeight());
-    }
-
-    si_ch_height();
-
-    $(window).on('resize', function(){
-      si_ch_height();
-    });
-
-    si_ch_btn.on('click', function(){
-
-      if(si_ch_window.hasClass('hidden')) {
-        si_ch_show();
-      }
-    });
-    si_ch_close_btn.on('click', function(){
-      if(!si_ch_window.hasClass('hidden')) {
-        si_ch_hide();
-      }
-    });
-  }
+  modalSizeChart();
 
   //simple product description
   if($('.sp-desc').length) {
